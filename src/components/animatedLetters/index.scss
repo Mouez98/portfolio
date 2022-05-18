@@ -6,6 +6,7 @@
 .animated-letter {
     @extend %animatedLetterInitials ;
     opacity: 0;
+    
     animation: bounceIn 1s 1s forwards;
 }
 

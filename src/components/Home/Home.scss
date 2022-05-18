@@ -1,12 +1,12 @@
 %h1Pseudo {
-    font-family: 'La Belle Aurore';
+    font-family: 'La Belle Aurore', cursive;
     color: #ddd700;
     font-size: 18px;
     position: absolute;
 }
 
 
-.text-zone {
+.home-page .text-zone {
     position: absolute;
     left: 10%;
     top: 50%;
@@ -36,7 +36,7 @@ h1 {
         @extend %h1Pseudo;
         margin-top: 18px;
         margin-left: 20px;
-        animation: fadeIn 1s 1.7s backwards;
+        animation: fadeIn 1s 2s backwards;
         opacity: .6;
     }
 
