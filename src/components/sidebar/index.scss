@@ -1,6 +1,7 @@
+@import '../../assets//Styles/colors';
 .nav-bar {
     width: 60px;
-    background: #181818 ;
+    background: $dark-color;
     height: 100%;
     min-height: 500px;
     position: absolute;
@@ -32,7 +33,7 @@ nav {
     width: 100%;
     a {
         font-size: 22px;
-        color: #4d4d4e;
+        color: $dark-gray-color;
         display: block;
         line-height: 51px;
         position: relative;
@@ -41,7 +42,7 @@ nav {
             transition: all .3s ease-out;
         }
         &:hover {
-            color: #ffd700;
+            color: $primary-cyan-color;
             svg {
                 opacity: 0;
             }
@@ -78,7 +79,7 @@ nav {
         }
         &.active {
             svg {
-                color: #ffd700;
+                color: $primary-cyan-color;
             }
         }
     }
@@ -101,7 +102,7 @@ ul {
            line-height: 16px; 
 
            &:hover svg {
-               color: #ffd700;
+               color: $primary-cyan-color;
            }
         }
     }

@@ -1,3 +1,5 @@
+@import '../../assets//Styles/colors';
+
 %animatedLetterInitials {
     display: inline-block;
     min-width: 10px;
@@ -14,7 +16,7 @@
     @extend %animatedLetterInitials ;
     animation-fill-mode: both;
     &:hover {
-        color: #ddd700;
+        color: $primary-cyan-color;
         animation: rubberBand 1s;
     }
 }

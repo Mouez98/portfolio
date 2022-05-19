@@ -1,3 +1,5 @@
+@import '../../../assets/Styles/colors';
+
 %transformRotateZ {
     transform: rotateZ(30deg) !important;
 }
@@ -36,6 +38,6 @@
 }
 
 .svg-container {
-    stroke: #ffd700;
+    stroke: $primary-cyan-color;
     stroke-width: 10px;
 }

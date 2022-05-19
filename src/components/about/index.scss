@@ -1,3 +1,10 @@
+$react-color: #5ed4f4;
+$angular-color: #dd0031;
+$css3-color: #28a4d9;
+$js-color: #efd81d;
+$git-color: #ec4d28;
+$html5-color: #f06529;
+
 .stage-cube-cont {
     width: 50%;
     height: 100%;
@@ -11,17 +18,18 @@
     .cubespinner {
         transform-style: preserve-3d;
         animation-name: spincube;
-        animation-duration: 12s;
+        animation-duration: 50s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         transform-origin: 100px 100px 0;
+        margin-left: calc(50% - 100px);
 
         div {
             position: absolute;
             width: 200px;
             height: 200px;
             border: 1px solid #ccc;
-            background: rgba(255,255,255,.4);
+            background: rgba(255, 255, 255, .4);
             font-size: 100px;
             display: flex;
             justify-content: center;
@@ -31,21 +39,32 @@
 
         .face1 {
             transform: translateZ(100px);
+            color: $angular-color;
         }
+
         .face2 {
-            transform: rotateY(90deg)  translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+            color: $html5-color;
         }
+
         .face3 {
             transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+            color: $css3-color;
         }
+
         .face4 {
-            transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+            transform: rotateY(180deg) rotateX(360deg) translateZ(100px);
+            color: $react-color;
         }
+
         .face5 {
             transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+            color: $js-color;
         }
+
         .face6 {
-            transform: rotateY(-90deg) translateZ(100px);
+            transform: rotateY(180deg) rotateX(-90deg) translateZ(100px);
+            color: $git-color;
         }
     }
 }
@@ -54,7 +73,7 @@
 
     from,
     to {
-        transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 
     16% {
