@@ -1,0 +1,54 @@
+///Icons Colors
+$react-color: #5ed4f4;
+$angular-color: #dd0031;
+$css3-color: #28a4d9;
+$js-color: #efd81d;
+$git-color: #ec4d28;
+$html5-color: #f06529;
+
+
+@mixin cubepinner ($height,$width) {
+    div {
+        position: absolute;
+        width: $width;
+        height: $height;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, .4);
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0 lightyellow;
+    }
+
+    .front {
+        transform: translateZ(calc($height / 2)) rotateX(0deg);
+        color: $angular-color;
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(calc($height / 2));
+        color: $html5-color;
+    }
+
+    .top {
+        transform:  rotateX(90deg) rotateZ(270deg) translateZ(calc($height / 2));
+        color: $css3-color;
+    }
+
+    .back {
+        transform: rotateY(180deg)  translateZ(calc($height / 2));
+        color: $react-color;
+       
+    }
+
+    .left {
+        transform: rotateY(-90deg) rotateZ(90deg)  translateZ(calc($height / 2));
+        color: $js-color;
+    }
+
+    .bottom {
+        transform:  rotateX(-90deg)  translateZ(calc($height / 2));
+        color: $git-color;
+    }
+}
