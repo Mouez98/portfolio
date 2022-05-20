@@ -1,36 +1,18 @@
-import { useState, useEffect } from 'react'
 import './Home.scss'
-
+import useLetteranimation from '../../hooks/use-letterAnimation.js'
 import logoS from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../animatedLetters'
 import Logo from './logo/index'
+import Loader from 'react-loaders'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('animated-letter')
+  const letterClass = useLetteranimation()
   const strArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
-  useEffect(() => {
-     setTimeout(() => {
-      setLetterClass('animated-letter-hover')
-    }, 4000)
-  }, [])
+  const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r','.']
+  
   return (
+    <>
     <div className="container home-page">
       <div className="text-zone">
         <h1>
@@ -61,6 +43,8 @@ const Home = () => {
       </div>
       <Logo />
     </div>
+    <Loader type='pacman' />
+    </>
   )
 }
 

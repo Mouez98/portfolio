@@ -27,17 +27,17 @@ const Sidebar = () => {
       </nav>
       <ul>
           <li>
-              <a target='_blank' rel='noreferrer' href='www.linkedin.com/in/mouez-matoui'>
+              <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/mouez-matoui'>
                   <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
               </a>
           </li>
           <li>
-              <a target='_blank' rel='noreferrer' href='www.github.com'>
+              <a target='_blank' rel='noreferrer' href='https://www.github.com'>
                   <FontAwesomeIcon icon={faGithub} color='#4d4d4e' />
               </a>
           </li>
           <li>
-              <a target='_blank' rel='noreferrer' href='www.facebook.com'>
+              <a target='_blank' rel='noreferrer' href='https://www.facebook.com'>
                   <FontAwesomeIcon icon={faFacebook} color='#4d4d4e' />
               </a>
           </li>
