@@ -21,6 +21,28 @@
              width: 50px;
          }
        }
+       ul {
+        list-style: none;
+        position: absolute;
+        bottom: 20px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        li {
+            a {
+               padding: 7px 0;
+               display: block;
+               font-size: 15px;
+               line-height: 16px; 
+    
+               &:hover svg {
+                   color: $primary-cyan-color;
+               }
+            }
+        }
+    }
 }
 
 nav {
@@ -85,25 +107,3 @@ nav {
     }
 }
 
-ul {
-    list-style: none;
-    position: absolute;
-    bottom: 20px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-    li {
-        a {
-           padding: 7px 0;
-           display: block;
-           font-size: 15px;
-           line-height: 16px; 
-
-           &:hover svg {
-               color: $primary-cyan-color;
-           }
-        }
-    }
-}

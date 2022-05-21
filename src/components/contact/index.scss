@@ -3,25 +3,114 @@
 .contact-form {
     width: 100%;
     margin-top: 20px;
+
     ul {
         margin: 0;
         padding: 0;
+
         li {
-            padding: 10px 0;
-            margin: 10px 0;
-            input {
-                padding: 0;
-                margin: 0;
-                color: $light-gray-color;
-                &.half {
-                    width: 25%;
-                    // margin-left: 5px;
-                    display: inline-block;
-                }
+            position: relative;
+            padding: 0;
+            margin: 0 0;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 2s 2s forwards;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            font-size: 16px;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0;
+            border: none;
+            height: 50px;
+            color: $dark-gray-color;
+            background-color: $light-gray-color;
+            transition: all .3s ease-in;
+
+            &::placeholder {
+                color: $dark-gray-color;
+            }
+
+            &:focus {
+                outline: none;
             }
         }
-    }
-        
-    
 
+        textarea {
+            padding: 20px;
+            min-height: 150px;
+        }
+    }
+
+    .flat-button {
+        padding: 7px 15px;
+        background-color: transparent;
+        border: 1px solid $primary-cyan-color;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $primary-cyan-color;
+        display: block;
+        margin-left: auto;
+        font-size: 11px;
+    }
 }
+
+.form-control {
+    display: flex;
+    column-gap: 10px;
+
+    .half {
+        flex: 1 1 49%;
+    }
+}
+
+
+
+
+.map-wrap {
+    background: $secondry-cyan-color;
+    
+    width: 53%;
+    height: 115%;
+    margin-top: -3%;
+    position: relative;
+    margin-left: 20px;
+    .info-map {
+        position: absolute;
+        background-color: $dark-color;
+        top: 50px;
+        left: 40px;
+        width: 267px;
+        padding: 20px;
+        color: $light-gray-color;
+        font-family: 'Helvetica';
+        font-size: 17px ;
+        font-weight: 300;
+        opacity: 0;
+        animation: fadeIn 1s 1.5s forwards;
+        z-index: 999;
+
+        
+        span {
+            font-size: 16px;
+            display: block;
+            padding-top: 20px;
+            color: $primary-cyan-color;
+            }
+    }
+  }
+  
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
+  }

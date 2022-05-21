@@ -15,68 +15,69 @@
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
-}
 
-h1 {
-    color: #fff;
-    font-size: 53px;
-    margin: 0;
-    font-family: 'Coolvetica';
-    line-height: 53px;
-    font-weight: 400;
+    h1 {
+        color: #fff;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        line-height: 53px;
+        font-weight: 400;
 
-    &::before {
-        content: '<h1>';
-        @extend %h1Pseudo;
-        margin-top: -40px;
-        left: 15px;
-        opacity: .6;
+        &::before {
+            content: '<h1>';
+            @extend %h1Pseudo;
+            margin-top: -40px;
+            left: 15px;
+            opacity: .6;
+        }
+
+        &::after {
+            content: '</h1>';
+            @extend %h1Pseudo;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: fadeIn 1s 2s backwards;
+            opacity: .6;
+        }
+
+        img {
+            width: 32px;
+            margin-left: 20px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s 1.4s linear both;
+        }
     }
 
-    &::after {
-        content: '</h1>';
-        @extend %h1Pseudo;
-        margin-top: 18px;
-        margin-left: 20px;
-        animation: fadeIn 1s 2s backwards;
-        opacity: .6;
+    h2 {
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
     }
 
-    img {
-        width: 32px;
-        margin-left: 20px;
-        opacity: 0;
-        height: auto;
-        animation: rotateIn 1s 1.4s linear both;
-    }
-}
+    .flat-button {
+        color: $light-gray-color;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid $primary-cyan-color;
+        border-radius: 2px;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
 
-h2 {
-   color: #8d8d8d;
-   margin-top: 20px;
-   font-weight: 400;
-   font-size: 11px;
-   font-family: sans-serif;
-   letter-spacing: 3px;
-   animation: fadeIn 1s 1.8s backwards;
-}
-
-.flat-button {
-    color: $light-gray-color;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid $primary-cyan-color;
-    border-radius: 2px;
-    margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1.8s backwards;
-    white-space: nowrap;
-    &:hover {
-        background: $primary-cyan-color;
-        color: #333;
+        &:hover {
+            background: $primary-cyan-color;
+            color: #333;
+        }
     }
 }

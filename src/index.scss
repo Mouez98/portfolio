@@ -1,7 +1,9 @@
 @import 'animate.css' ;
 @import './assets/Styles/_colors.scss';
 
-
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
