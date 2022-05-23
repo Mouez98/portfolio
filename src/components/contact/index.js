@@ -1,10 +1,10 @@
 import { useRef } from 'react'
 import Loader from 'react-loaders'
 import useLetteranimation from '../../hooks/use-letterAnimation'
-import AnimatedLetters from '../animatedLetters'
 import emailjs from '@emailjs/browser'
 import Map from './Map'
 import './index.scss'
+import Header from '../Ui/Header'
 const Contact = () => {
   const letterClass = useLetteranimation(3000)
 
@@ -36,13 +36,7 @@ const Contact = () => {
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              letterClass={letterClass}
-              idx={15}
-            />
-          </h1>
+          <Header strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']} letterClass={letterClass} idx={15} />
           <p>
             I am interested in freelance opportunities – especially ambitious or
             large projects. However, if you have other request or question,
@@ -59,6 +53,8 @@ const Contact = () => {
                       placeholder="Name"
                       required
                     />
+                    <label htmlFor='name'  className='label-name'>
+                    </label>
                   </li>
                   <li className="half">
                     <input
@@ -67,6 +63,8 @@ const Contact = () => {
                       placeholder="Email"
                       required
                     />
+                    <label htmlFor='email'  className='label-email'>
+                    </label>
                   </li>
                 </div>
                 <li>
@@ -76,6 +74,8 @@ const Contact = () => {
                     placeholder="Subject"
                     required
                   />
+                  <label htmlFor='subject'  className='label-subject'>
+                    </label>
                 </li>
                 <li>
                   <textarea
@@ -83,6 +83,8 @@ const Contact = () => {
                     name="message"
                     required
                   ></textarea>
+                  <label htmlFor='message'  className='label-textarea'>
+                    </label>
                 </li>
                 <li>
                   <input type="submit" value="send" className="flat-button" />

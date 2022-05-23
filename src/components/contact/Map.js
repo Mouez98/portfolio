@@ -15,7 +15,7 @@ const Map = () => {
           <br />
           <span>Mouez.matoui@gmail.com</span>
         </div>
-        <MapContainer center={[33.887187, 9.796047]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer center={[33.887187, 9.796047]} zoom={13} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[33.887187, 9.796047]}>
               <Popup>Mouez lives here, come over for a cup of coffee </Popup>
