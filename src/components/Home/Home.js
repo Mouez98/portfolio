@@ -3,13 +3,34 @@ import useLetteranimation from '../../hooks/use-letterAnimation.js'
 import logoS from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../animatedLetters'
-import Logo from './logo/index'
 import Loader from 'react-loaders'
+import styled from 'styled-components';
+
 
 const Home = () => {
   const letterClass = useLetteranimation()
   const strArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
   const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r','.']
+
+  const Alpha = styled.div`
+  font-size: 100px;
+  display: inline-block;
+  transform: rotate(0deg);
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  font-weight: bolder;
+  font-stretch: ultra-expanded;
+  left: 150px;
+  top: 100px;
+  color: #45a29e;
+
+`;
+
+const AlphaOne = styled(Alpha)`
+color: #dc3545;
+left: 145px;
+top: 90px;
+`
   
   return (
     <>
@@ -41,7 +62,10 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
-      <Logo />
+      <div className="logo">
+      <Alpha > M </Alpha>
+      <AlphaOne >M </AlphaOne>
+     </div>
     </div>
     <Loader type='pacman' />
     </>

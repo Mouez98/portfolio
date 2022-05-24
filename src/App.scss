@@ -1,22 +1,26 @@
-$primary-color: #ffd700 ;
+@import './assets/Styles/colors';
 
-// @import "animate.css";
 @import '~loaders.css/src/animations/pacman.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&family=Open+Sans:wght@400;700&family=Rubik:wght@300;500;700&display=swap');
 
 @font-face {
   font-family: 'Helvetica neue';
   src: url(./assets/fonts/helvetica-neu.ttf) format('ttf');
 }
+
 @font-face {
   font-family: 'Coolvetica';
   src: url(./assets/fonts/CoolveticaRg-Regular.woff2) format('woff2');
 }
+
 @font-face {
   font-family: 'La belle aurore';
   src: url(./assets/fonts/LaBelleAurore.woff2) format('woff2');
 }
 
-input, textarea {
+input,
+textarea {
   font-family: 'Helvetica neue';
 }
 
@@ -33,5 +37,20 @@ input, textarea {
   height: 55px;
   animation: fadeOut .5s .5s;
   animation-fill-mode: forwards;
+
+   .loader-inner div:first-of-type , .loader-inner div:nth-child(2){
+    border-top: 25px solid $primary-cyan-color;
+    border-bottom: 25px solid $primary-cyan-color;
+    border-left: 25px solid $primary-cyan-color;
+    border-right: 25px solid transparent;
+    background-color: transparent !important;
+    } 
+   .loader-inner {
+     div {
+       background-color: $primary-cyan-color;
+     }
+   }
+    
   
+
 }

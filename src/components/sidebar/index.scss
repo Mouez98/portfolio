@@ -104,6 +104,11 @@ nav {
             content: 'SKILLS';
             }
         }
+        &.my-work-link {
+            &:after {
+            content: 'MY WORK';
+            }
+        }
         &.active {
             svg {
                 color: $primary-cyan-color;

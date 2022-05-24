@@ -35,7 +35,8 @@ const Logo = () => {
         delay: 4,
         duration: 4,
       }
-    )
+    );
+    return
   }, [])
   return (
     <div ref={bgRef} className="logo-container">
