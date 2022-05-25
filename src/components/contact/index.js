@@ -36,12 +36,18 @@ const Contact = () => {
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <Header strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']} letterClass={letterClass} idx={15} />
-          <p>
-            I am interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other request or question,
-            don’t hesitate to contact me using below form either.
-          </p>
+          <Header
+            strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
+            letterClass={letterClass}
+            idx={15}
+          />
+          <div className="paraContainer">
+            <p>
+              I am interested in freelance opportunities – especially ambitious
+              or large projects. However, if you have other request or question,
+              don’t hesitate to contact me using below form either.
+            </p>
+          </div>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -53,8 +59,7 @@ const Contact = () => {
                       placeholder="Name"
                       required
                     />
-                    <label htmlFor='name'  className='label-name'>
-                    </label>
+                    <label htmlFor="name" className="label-name"></label>
                   </li>
                   <li className="half">
                     <input
@@ -63,8 +68,7 @@ const Contact = () => {
                       placeholder="Email"
                       required
                     />
-                    <label htmlFor='email'  className='label-email'>
-                    </label>
+                    <label htmlFor="email" className="label-email"></label>
                   </li>
                 </div>
                 <li>
@@ -74,8 +78,7 @@ const Contact = () => {
                     placeholder="Subject"
                     required
                   />
-                  <label htmlFor='subject'  className='label-subject'>
-                    </label>
+                  <label htmlFor="subject" className="label-subject"></label>
                 </li>
                 <li>
                   <textarea
@@ -83,8 +86,7 @@ const Contact = () => {
                     name="message"
                     required
                   ></textarea>
-                  <label htmlFor='message'  className='label-textarea'>
-                    </label>
+                  <label htmlFor="message" className="label-textarea"></label>
                 </li>
                 <li>
                   <input type="submit" value="send" className="flat-button" />

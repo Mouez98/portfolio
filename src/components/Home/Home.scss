@@ -12,79 +12,113 @@
     display: flex;
     align-items: center;
     justify-content: center;
-.text-zone {
-    max-height: 90%;
-    display: block;
+    width: 80%;
+    position: relative;
 
-    h1 {
-        color: #fff;
-        font-size: 53px;
-        margin: 0;
-        font-family: 'Coolvetica';
-        line-height: 53px;
-        font-weight: 400;
+    .text-zone {
+        max-height: 90%;
+        display: block;
+        flex: 1 1 60%;
 
-        &::before {
-            content: '<h1>';
-            @extend %h1Pseudo;
-            margin-top: -40px;
-            left: 15px;
-            opacity: .6;
+        h1 {
+            color: #fff;
+            font-size: 60px;
+            margin: 0;
+            font-family: 'Coolvetica';
+            line-height: 53px;
+            font-weight: 400;
+
+            &::before {
+                content: '<h1>';
+                @extend %h1Pseudo;
+                margin-top: -40px;
+                left: 15px;
+                opacity: .6;
+            }
+
+            &::after {
+                content: '</h1>';
+                @extend %h1Pseudo;
+                margin-top: 18px;
+                margin-left: 20px;
+                animation: fadeIn 1s 2s backwards;
+                opacity: .6;
+            }
+
+            img {
+                width: 32px;
+                margin-left: 20px;
+                opacity: 0;
+                height: auto;
+                animation: rotateIn 1s 1.4s linear both;
+            }
         }
 
-        &::after {
-            content: '</h1>';
-            @extend %h1Pseudo;
-            margin-top: 18px;
-            margin-left: 20px;
-            animation: fadeIn 1s 2s backwards;
-            opacity: .6;
+        p {
+            color: $grey-color;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 11px;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            animation: fadeIn 1s 1.8s backwards;
+            position: relative;
         }
 
-        img {
-            width: 32px;
-            margin-left: 20px;
-            opacity: 0;
-            height: auto;
-            animation: rotateIn 1s 1.4s linear both;
+        .flat-button {
+            color: $light-gray-color;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid $primary-cyan-color;
+            margin-top: 25px;
+            float: left;
+            animation: fadeIn 1s 1.8s backwards;
+            white-space: nowrap;
+
+            &:hover {
+                background: $primary-cyan-color;
+                color: $dark-gray-color;
+            }
         }
     }
-
-    h2 {
-        color: #8d8d8d;
-        margin-top: 20px;
-        font-weight: 400;
-        font-size: 11px;
-        font-family: sans-serif;
-        letter-spacing: 3px;
-        animation: fadeIn 1s 1.8s backwards;
-    }
-
-    .flat-button {
-        color: $light-gray-color;
-        font-size: 13px;
-        font-weight: 400;
-        letter-spacing: 4px;
-        font-family: sans-serif;
-        text-decoration: none;
-        padding: 10px 18px;
-        border: 1px solid $primary-cyan-color;
-        margin-top: 25px;
-        float: left;
-        animation: fadeIn 1s 1.8s backwards;
-        white-space: nowrap;
-
-        &:hover {
-            background: $primary-cyan-color;
-            color: #333;
-        }
-    }
-}
 }
 
 
 .logo {
     position: relative;
-    width: 40%;
-    max-height: 90%;
+    flex: 1 1 39%;
+    // max-height: 90%;
+    font-size: 300px;
 }
+
+#logoChar {
+    font-size: 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 7px 0 5px;
+    animation: rotateIn .7s 1.4s linear both;
+
+    div {
+        transform: rotate(0deg);
+        min-width: 45px;
+        font-size: 52px;
+        left: 0;
+        top: 0;
+
+    }
+
+    div:nth-of-type(2) {
+        left: 5%;
+        top: -1px;
+    }
+}
+
+#main-logo {
+   animation: rubberBand 1s 1.5s forwards;
+}
+

@@ -1,31 +1,30 @@
-
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Logo = () => {
+  const Alpha = styled.div`
+    font-size: inherit;
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+    left: 50%;
+    top: 50%;
+    color: #45a29e;
+    transform: translate(-50%, -50%) rotate(343deg);
+  `
 
-    const Alpha = styled.div`
-        font-size: 100px;
-        display: inline-block;
-        transform: rotate(335deg);
-        font-family: roboto;
-        position: absolute;
-        font-weight: bolder;
-        font-stretch: ultra-expanded;
+  const AlphaOne = styled(Alpha)`
+    color: #dc3545;
+    left: 51%;
+  `
 
-    `;
-
-    const AlphaOne = styled(Alpha)`
-    color: cyan;
-    left: 150px;
-    top: 100px;
-    `
-
-    return(
-  <div className="logo">
+  return (
+    <div className="logo">
       <Alpha> M </Alpha>
       <AlphaOne>M</AlphaOne>
-
-  </div>
-)}
+    </div>
+  )
+}
 
 export default Logo

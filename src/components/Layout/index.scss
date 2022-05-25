@@ -30,14 +30,13 @@
     will-change: contents;
     height: 90%;
     min-height: 566px;
-    position: absolute;
     opacity: 0;
-    top: 5%;
-    margin: 0 auto ;
-    z-index: 1;
+    margin: 0 auto;
     transform-style: preserve-3d;
-    animation: fadeIn 1s 1s forwards;    
+    animation: fadeIn 1s 1s forwards;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container.about-page, .container.contact-page, .container.skills-page {

@@ -13,6 +13,7 @@ const Skills = () => {
     <div className="container skills-page">
       <div className="text-zone">
         <Header strArray={headerText} letterClass={letterClass} idx={15} />
+        <div className='paraContainer'>
         <p>
           Expert in front-end development including technologies like 
           <span className="tech-tag">HTML5</span>, 
@@ -42,6 +43,7 @@ const Skills = () => {
             <Link to='cv' className='link'>link</Link> , or feel free to give a peek on some of my blog
             <Link to='blog' className='link'>posts</Link>.
           </p>
+          </div>
       </div>
     </div>
     <Loader type='pacman' />

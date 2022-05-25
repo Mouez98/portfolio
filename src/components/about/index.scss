@@ -1,3 +1,5 @@
+@import '../../assets/Styles/colors';
+
 $react-color: #5ed4f4;
 $angular-color: #dd0031;
 $css3-color: #28a4d9;
@@ -5,15 +7,45 @@ $js-color: #efd81d;
 $git-color: #ec4d28;
 $html5-color: #f06529;
 
-.stage-cube-cont {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    padding-top: 18%;
-    margin-left: 0;
+
+
+.paraContainer {
+  position: relative;
+  padding: 10px 0;
+  &::before {
+    content: "<p>";
+    font-family: "La Belle Aurore", cursive;
+    color: $primary-cyan-color;
+    font-size: 18px;
     position: absolute;
-    right: 0;
-    overflow: hidden;
+    margin-top: -10px;
+    left: -10px;
+    opacity: 0.6;
+    line-height: 18px;
+  }
+  &::after {
+    content: "</p>";
+    font-family: "La Belle Aurore", cursive;
+    color: $primary-cyan-color;
+    font-size: 18px;
+    position: absolute;
+    margin-left: 20px;
+    left: -30px;
+    bottom: -10px;
+    opacity: 0.6;
+    line-height: 18px;
+  }
+
+}
+
+.stage-cube-cont {
+  width: 50%;
+  margin-top: -100px;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
 
     .cubespinner {
         transform-style: preserve-3d;
