@@ -1,34 +1,58 @@
-import './index.scss';
+import { useEffect, useState, useCallback } from 'react'
 
-import projectImg from '../../assets/images/Screenshot (27).png'
+import './index.scss'
+import Modal from './Modal'
 
+import data from './data'
 
 const MyWork = () => {
-  return(
-      <div className='container my-work-page'>
-          <section >
-            <article>
-              <div className='bar'>
-              <i>
-              </i>
-              <h3>Kasper Template</h3>
+  const [projects, setProjects] = useState([])
+  const [showOverlay, setShowOverlay] = useState(false)
+  const [currentProjectId, setCurrentProjectId] = useState(null)
+
+  const learnMoreBtnHandler =(id) => {
+     setShowOverlay((prev) => !prev)
+    setCurrentProjectId(id)
+  }
+  
+  const showOverlayHandler = useCallback(()=> {
+    setShowOverlay((prev) => !prev)
+  },[]) 
+
+  const project = currentProjectId? projects.find(project => project.id === currentProjectId) : null;
+
+  useEffect(() => {
+    setProjects(data)
+  }, [])
+  return (
+    <div className="container my-work-page">
+      {showOverlay ? <Modal onClickHandler={showOverlayHandler} project={project } /> : null}
+      <section>
+        {projects && projects.length > 0 ? (
+          projects.map((project, idx) => (
+            <article key={project.name + idx}>
+              <div className="bar">
+                <i></i>
+                <h3>{project.name}</h3>
               </div>
               <div className="article-content">
-                <img src={projectImg} alt="kasper" />
+                <div className="article-modal">
+                  {project.technologies.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                  <button className="flat-button" onClick={()=>learnMoreBtnHandler(project.id)}>
+                    Learn more
+                  </button>
+                </div>
+                <img src={project.homePage} alt={project.name} />
               </div>
             </article>
-            <article>
-            <div className='bar'>
-              <i>
-              </i>
-              <h3>Kasper Template</h3>
-              </div>
-              <div className="article-content">
-                <img src={projectImg} alt="kasper" />
-              </div>
-            </article>
-          </section>
-      </div>
+          ))
+        ) : (
+          <h2>No Projects found</h2>
+        )}
+      </section>
+    </div>
   )
 }
 

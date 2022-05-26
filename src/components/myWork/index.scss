@@ -8,14 +8,92 @@ section {
 }
 
 article {
-
     display: block;
     width: 50%;
     margin: auto;
     height: auto;
+    overflow: hidden;
+    box-shadow: 3px 6px 0px 2px rgb(0 0 0 / 30%) ;
 
     .article-content {
         width: 100%;
+        position: relative;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 50px 5px rgb(0 0 0 / 75%) inset;
+        }
+
+        &:hover .article-modal {
+            top: 0;
+            animation: slideInDown .3s both;
+        }
+
+
+        .article-modal {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-gray-color;
+            padding: 50px;
+            transition: all .3s;
+
+            .flat-button {
+                color: $light-gray-color;
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: 4px;
+                font-family: sans-serif;
+                text-decoration: none;
+                padding: 10px 18px;
+                border: 2px solid $primary-cyan-color;
+                margin: 25px auto 0;
+                display: block;
+                white-space: nowrap;
+                background: $dark-gray-color;
+                cursor: pointer;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                &:hover {
+                    background: $light-gray-color;
+                    color: $dark-gray-color;
+                }
+            }
+
+
+            span {
+                display: inline-block;
+                padding: 8px 5px;
+                background-color: rgb(49 49 49/ 50%);
+                color: #fff;
+                border: 1px solid $secondry-cyan-color;
+                border-bottom-width: 2px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                font: 700 1.3rem/1rem MontSerrat, Tahoma, Arial, sans-serif;
+                box-shadow: 1px 1px 0 $secondry-cyan-color;
+                margin: 3px;
+                opacity: 1;
+                position: relative;
+                overflow: hidden;
+                transition: transform .2s linear;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+        }
 
         img {
             width: 100%;
@@ -29,17 +107,17 @@ article {
     height: 26px;
     background-color: #ddd;
     width: 100%;
-    color: #6a6a6a;
     display: flex;
     z-index: 10;
 
     h3 {
-        color: #1f2833;
-        font-size: 15px;
+        color: #454545;
+        font-size: 10px;
         text-transform: uppercase;
         font-weight: 300;
         text-align: center;
         margin: auto;
+        letter-spacing: -1px;
         margin-left: 50px;
 
     }
