@@ -65,12 +65,12 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a target="_blank" rel="noreferrer" href="https://www.github.com">
+          <a target="_blank" rel="noreferrer" href="https://www.github.com/mouez98">
             <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
           </a>
         </li>
         <li>
-          <a target="_blank" rel="noreferrer" href="https://www.facebook.com">
+          <a target="_blank" rel="noreferrer" href="https://m.facebook.com/mouez.rm11/">
             <FontAwesomeIcon icon={faFacebook} color="#4d4d4e" />
           </a>
         </li>

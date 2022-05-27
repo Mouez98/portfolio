@@ -1,5 +1,15 @@
 @import '../../assets/Styles/colors';
 
+.contact-page {
+    height: 100%;
+    overflow: scroll;
+    .text-zone h1{
+    margin-top: 5rem !important;
+    margin-bottom: 40px;
+    left: 0 !important;
+    }
+}
+
 .contact-form {
     width: 100%;
     margin-top: 20px;
@@ -75,7 +85,7 @@
         }
         textarea {
             padding: 20px;
-            min-height: 150px;
+            min-height: 120px;
             resize: vertical;
         }
     }

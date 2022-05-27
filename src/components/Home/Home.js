@@ -1,12 +1,20 @@
 import './Home.scss'
 import useLetteranimation from '../../hooks/use-letterAnimation.js'
-import logoS from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../animatedLetters'
 import Loader from 'react-loaders'
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
+
+import Contact from '../contact/index'
+import About from '../about/index'
+import Skills from '../skills/index'
+import MyWork from '../myWork/index'
+import Button from '../Ui/Button'
 
 const Home = () => {
+  const location = useLocation()
+  console.log(location);
   const letterClass = useLetteranimation()
   const strArray = ['o', 'u', 'e', 'z']
   const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.',]
@@ -61,7 +69,7 @@ const Home = () => {
             <p>Frontent developer / ReactJs</p>
           </div>
           <Link to="/contact" className="flat-button">
-            CONTACT ME
+            <Button text='CONTACT ME' />
           </Link>
         </div>
         <div className="logo" id="main-logo">
@@ -69,8 +77,12 @@ const Home = () => {
           <AlphaOne>M </AlphaOne>
         </div>
       </div>
+      <About />
+      <Skills />
+      <MyWork />
+      <Contact />
       <Loader type="pacman" />
-    </>
+   </>
   )
 }
 

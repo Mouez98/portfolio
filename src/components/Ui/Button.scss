@@ -1,0 +1,51 @@
+@import '../../assets/Styles/colors';
+
+%spans {
+  position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+}
+
+
+
+
+#button {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+      .bg {
+        width: 106%;
+      }
+      .text {
+        color: $dark-gray-color;
+    }
+    }
+    .bg {
+     @extend %spans;
+     width: 0;
+     left: -5%;
+     z-index: 2;
+     background-color: $primary-cyan-color;
+     transition: width .4s ease-out;
+     transform: skewX(-10deg);
+    
+    }
+    .base {
+      @extend %spans;
+      z-index: 3;
+      left: 0;
+      width: 100%;
+      border: 1px solid $primary-cyan-color;
+    }
+    .text {
+      @extend %spans;
+      z-index: 4;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #c5c6c7;
+    }
+}

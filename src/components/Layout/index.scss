@@ -9,21 +9,26 @@
 .top-tags {
     bottom: auto;
     top: 35px;
+    .top-tag-body {
+        margin-left: 10px;
+    }
 }
 
 .tags {
     color: $primary-cyan-color;
     opacity: .6;
     position: absolute;
-    bottom: 0;
-    left: 120px;
+    // bottom: 0;
+    left: 90px;
     font-size: 18px;
     font-family: 'La Belle Aurore';
 }
 
 .bottom-tag-html {
     margin-left: -20px;
+   
 }
+
 
 .container {
     width: 100%;

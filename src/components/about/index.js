@@ -1,19 +1,15 @@
-import {
-  faAngular,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
+import {faAngular,faCss3,faGitAlt,faHtml5,faJsSquare,faReact} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import './index.scss'
 import useLetteranimation from '../../hooks/use-letterAnimation'
 import Header from '../Ui/Header'
+import { useLocation } from 'react-router-dom'
 
 const About = () => {
   const letterClass = useLetteranimation(3000)
+  const location = useLocation()
+  console.log(location.pathname.slice(1));
 
   return (
     <>

@@ -6,6 +6,11 @@
 }
 html {
   font-size: 62.5%;
+  // overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 body {
@@ -17,6 +22,8 @@ body {
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ul {

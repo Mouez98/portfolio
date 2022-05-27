@@ -41,7 +41,7 @@ const Skills = () => {
             Visit my
             <Link to='https://www.linkedIn.com/' className='link'>LinkedIn</Link> profile for more details. Also you can checkout my cv on this
             <Link to='cv' className='link'>link</Link> , or feel free to give a peek on some of my blog
-            <Link to='blog' className='link'>posts</Link>.
+            <Link to='blog' className='link'>posts .</Link>
           </p>
           </div>
       </div>
