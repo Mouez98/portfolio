@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import Map from './Map'
 import './index.scss'
 import Header from '../Ui/Header'
+
 const Contact = () => {
   const letterClass = useLetteranimation(3000)
 
@@ -34,7 +35,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="container contact-page">
+      <div className={`container contact-page `}>
         <div className="text-zone">
           <Header
             strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}

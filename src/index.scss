@@ -6,7 +6,6 @@
 }
 html {
   font-size: 62.5%;
-  // overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -18,11 +17,11 @@ body {
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   color: $dark-gray-color;
   background: $gradient-bg ;
-  overflow: hidden;
+  // overflow: hidden;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: auto;
+  // overflow-y: auto;
   overflow-x: hidden;
 }
 

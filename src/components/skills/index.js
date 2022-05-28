@@ -2,12 +2,14 @@ import Loader from 'react-loaders'
 import { Link } from 'react-router-dom'
 import useLetteranimation from '../../hooks/use-letterAnimation'
 import Header from '../Ui/Header'
+import Chart from './Chart'
 import './index.scss'
 
 
 const Skills = () => {
   const letterClass = useLetteranimation(3000)
   const headerText = ['Skills', ' ', '&', ' ', 'Experncies']
+ 
   return (
       <>
     <div className="container skills-page">
@@ -44,6 +46,12 @@ const Skills = () => {
             <Link to='blog' className='link'>posts .</Link>
           </p>
           </div>
+      </div>
+      <div className='skills-details'>
+     <Chart width={95} skill='Front-end'/>
+     <Chart width={80} skill='react'/>
+     <Chart width={70} skill='css'/>
+     <Chart width={65} skill='html'/>
       </div>
     </div>
     <Loader type='pacman' />

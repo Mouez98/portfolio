@@ -4,16 +4,17 @@ import Loader from 'react-loaders'
 import './index.scss'
 import useLetteranimation from '../../hooks/use-letterAnimation'
 import Header from '../Ui/Header'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
+import useSectionClass from '../../hooks/use-sectionClass'
 
 const About = () => {
   const letterClass = useLetteranimation(3000)
-  const location = useLocation()
-  console.log(location.pathname.slice(1));
+  const sectionClass = useSectionClass()
+
 
   return (
     <>
-      <div className="container about-page">
+      <div className={`container about-page ${sectionClass}`}>
         <div className="text-zone">
           <Header
             letterClass={letterClass}

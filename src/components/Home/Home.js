@@ -14,7 +14,8 @@ import Button from '../Ui/Button'
 
 const Home = () => {
   const location = useLocation()
-  console.log(location);
+  console.log(location.pathname.slice(1));
+
   const letterClass = useLetteranimation()
   const strArray = ['o', 'u', 'e', 'z']
   const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.',]

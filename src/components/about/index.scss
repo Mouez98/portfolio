@@ -1,43 +1,5 @@
 @import '../../assets/Styles/colors';
 
-$react-color: #5ed4f4;
-$angular-color: #dd0031;
-$css3-color: #28a4d9;
-$js-color: #efd81d;
-$git-color: #ec4d28;
-$html5-color: #f06529;
-
-
-
-.paraContainer {
-  position: relative;
-  padding: 10px 0;
-  &::before {
-    content: "<p>";
-    font-family: "La Belle Aurore", cursive;
-    color: $primary-cyan-color;
-    font-size: 18px;
-    position: absolute;
-    margin-top: -10px;
-    left: -10px;
-    opacity: 0.6;
-    line-height: 18px;
-  }
-  &::after {
-    content: "</p>";
-    font-family: "La Belle Aurore", cursive;
-    color: $primary-cyan-color;
-    font-size: 18px;
-    position: absolute;
-    margin-left: 20px;
-    left: -30px;
-    bottom: -10px;
-    opacity: 0.6;
-    line-height: 18px;
-  }
-
-}
-
 .stage-cube-cont {
   width: 50%;
   margin-top: -100px;
@@ -47,103 +9,85 @@ $html5-color: #f06529;
   align-items: center;
   justify-content: flex-start;
 
-    .cubespinner {
-        transform-style: preserve-3d;
-        animation-name: spincube;
-        animation-duration: 12s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        transform-origin: 100px 100px 0;
-        margin-left: calc(50% - 100px);
+  .cubespinner {
+    transform-style: preserve-3d;
+    animation-name: spincube;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
 
-        div {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border: 1px solid #ccc;
-            background: rgba(255, 255, 255, .4);
-            font-size: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 20px 0 lightyellow;
-        }
-
-        // .front {
-        //     transform: translateZ(100px);
-        //     color: $angular-color;
-        // }
-
-        // .right {
-        //     transform: rotateY(90deg) translateZ(100px);
-        //     color: $html5-color;
-        // }
-
-        // .top {
-        //     transform:  rotateX(90deg) rotateZ(270deg) translateZ(100px);
-        //     color: $css3-color;
-        // }
-
-        // .back {
-        //     transform: rotateY(180deg)  translateZ(100px);
-        //     color: $react-color;
-           
-        // }
-
-        // .left {
-        //     transform: rotateY(-90deg)  rotateZ(90deg) translateZ(100px);
-        //     color: $js-color;
-        // }
-
-        // .bottom {
-        //     transform:  rotateX(-90deg) translateZ(100px);
-        //     color: $git-color;
-        // }
-        .face1 {
-          transform: translateZ(100px);
-          color: #dd0031;
-        }
-        .face2 {
-          transform: rotateY(90deg) translateZ(100px);
-          color: #f06529;
-        }
-        .face3 {
-          transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-          color: #28a4d9;
-        }
-        .face4 {
-          transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-          color: #5ed4f4;
-        }
-        .face5 {
-          transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-          color: #efd81d;
-        }
-        .face6 {
-          transform: rotateX(-90deg) translateZ(100px);
-          color: #ec4d28;
-        }
+    div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: rgba(255, 255, 255, .4);
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px 0 lightyellow;
     }
+
+
+    .face1 {
+      transform: translateZ(100px);
+      color: #dd0031;
+    }
+
+    .face2 {
+      transform: rotateY(90deg) translateZ(100px);
+      color: #f06529;
+    }
+
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+      color: #28a4d9;
+    }
+
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+      color: #5ed4f4;
+    }
+
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+      color: #efd81d;
+    }
+
+    .face6 {
+      transform: rotateX(-90deg) translateZ(100px);
+      color: #ec4d28;
+    }
+  }
 }
 
 @keyframes spincube {
+
   from,
   to {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
+
   16% {
     transform: rotateY(-90deg);
   }
+
   33% {
     transform: rotateY(-90deg) rotateZ(90deg);
   }
+
   50% {
     transform: rotateY(-180deg) rotateZ(90deg);
   }
+
   66% {
     transform: rotateY(-270deg) rotateZ(90deg);
   }
+
   83% {
-    transform: rotateX(90deg) ;
+    transform: rotateX(90deg);
   }
 }

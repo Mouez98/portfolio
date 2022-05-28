@@ -1,10 +1,22 @@
 @import '../../assets/Styles/colors';
+@import '../../assets/Styles/helpers';
 
 .page {
     width: 100%;
     height: 100%;
     position: absolute;
 }
+.full-section {
+    position: relative;
+    &::before {
+      @include htmlTags('<section>', 40px, 90px);
+    }
+    &::after {
+        @include htmlTags('</section>', '', 90px);
+      content: '</section>';
+      bottom: 40px;
+    }
+  }
 
 .top-tags {
     bottom: auto;
@@ -15,10 +27,9 @@
 }
 
 .tags {
-    color: $primary-cyan-color;
+    color: $light-gray-color;
     opacity: .6;
     position: absolute;
-    // bottom: 0;
     left: 90px;
     font-size: 18px;
     font-family: 'La Belle Aurore';
@@ -42,6 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+    padding-right: 20px;
 }
 
 .container.about-page, .container.contact-page, .container.skills-page {
@@ -61,27 +74,13 @@
             left: -10px;
 
             &::before {
-                content: '<h1>';
-                font-family: 'La Belle Aurore', cursive;
-                color: $primary-cyan-color;
-                font-size: 18px;
-                position: absolute;
-                margin-top: -10px;
-                left: -10px;
-                opacity: .6;
+                @include htmlTags('<h1>',-10px, -10px);
                 line-height: 18px;
             }
 
             &::after {
-                content: '</h1>';
-                font-family: 'La Belle Aurore', cursive;
-                color: $primary-cyan-color;
-                font-size: 18px;
-                position: absolute;
-                margin-left: 20px;
-                left: -30px;
+                @include htmlTags('</h1>','', -10px);
                 bottom: -20px;
-                opacity: .6;
                 line-height: 18px;
             }
 

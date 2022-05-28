@@ -2,13 +2,16 @@ import { useEffect, useState, useCallback } from 'react'
 
 import './index.scss'
 import Modal from './Modal'
-
+import Loader from 'react-loaders'
 import data from './data'
+import useSectionClass from '../../hooks/use-sectionClass'
 
 const MyWork = () => {
   const [projects, setProjects] = useState([])
   const [showOverlay, setShowOverlay] = useState(false)
   const [currentProjectId, setCurrentProjectId] = useState(null)
+
+  const sectionClass = useSectionClass()
 
   const learnMoreBtnHandler =(id) => {
      setShowOverlay((prev) => !prev)
@@ -25,7 +28,8 @@ const MyWork = () => {
     setProjects(data)
   }, [])
   return (
-    <div className="container my-work-page">
+    <>
+    <div className={`container my-work-page ${sectionClass}`}>
       {showOverlay ? <Modal onClickHandler={showOverlayHandler} project={project } /> : null}
       <section>
         {projects && projects.length > 0 ? (
@@ -53,6 +57,8 @@ const MyWork = () => {
         )}
       </section>
     </div>
+    <Loader type='pacman'/>
+    </>
   )
 }
 

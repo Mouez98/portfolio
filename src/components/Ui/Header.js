@@ -1,7 +1,7 @@
 import AnimatedLetters from '../animatedLetters'
 
 const Header = ({ strArray, letterClass, idx }) => (
-  <h1>
+  <h1 >
     <AnimatedLetters strArray={strArray} letterClass={letterClass} idx={idx} />
   </h1>
 )

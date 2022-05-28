@@ -1,4 +1,5 @@
 @import './assets/Styles/colors';
+@import './assets/Styles/helpers';
 
 @import '~loaders.css/src/animations/pacman.scss';
 
@@ -50,7 +51,25 @@ textarea {
        background-color: $primary-cyan-color;
      }
    }
-    
-  
 
+}
+
+/* Paragraph Html tags */
+.paraContainer {
+  position: relative;
+  padding: 10px 0;
+  p {
+    word-break: break-word;
+  }
+
+  &::before {
+    @include htmlTags('<p>', -10px, -10px);
+    line-height: 18px;
+  }
+
+  &::after {
+    @include htmlTags("</p>", '', -10px);
+    bottom: -10px;
+    line-height: 18px;
+  }
 }
