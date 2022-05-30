@@ -1,47 +1,45 @@
 @import './colors';
 
-.tags-styles {
+
+%tags-styles {
     font-family: 'La Belle Aurore', cursive;
     color: $light-gray-color;
-    font-size: 18px;
+    font-size: 1.8rem;
     position: absolute;
 }
 
-// @function postion($position) {
-//     @if($postion=='') {
-//         @return initial;
-//     }
-
-//     @return $postion;
-// }
-
-// @function postionTop($top) {
-//     @if($top=='') {
-//         @return initial;
-//     }
-
-//     @return $top
-// }
 
 @mixin htmlTags($tag, $top, $left) {
     content: $tag;
-    @extend .tags-styles;
-    @if($left=='') {
+    @extend %tags-styles;
+    @if $left == '' {
         left: initial;
     }
     @else {
         left: $left;
     }
-    top: $top;
+    @if $top == '' {
+        top: initial;
+    }
+    @else {
+        top: $top;
+    }
     opacity: .6;
 }
 
-@mixin pseudoBefAndAfter() {
-    ::before {
-        @content ;
+@mixin breakPoint($point) {
+    @if $point == 'mobile' {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == 'small' {
+        @media (min-width: 601px) and (max-width: 920px) {
+            @content;
+        }
     }
-
-    ::after {
-        @content ;
+     @else if $point == 'medium' {
+        @media (min-width: 921px) and (max-width: 1300px) {
+            @content;
+        }
     }
 }

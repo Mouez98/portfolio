@@ -15,7 +15,7 @@ import { faArrowDown} from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
   const letterClass = useLetteranimation()
   const strArray = ['o', 'u', 'e', 'z']
-  const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
+  const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
 
   const Alpha = styled.div`
     font-size: inherit;
@@ -59,7 +59,7 @@ const Home = () => {
             <span className={`${letterClass} _12`}>I</span>
             <span className={`${letterClass} _13`}>'</span>
             <span className={`${letterClass} _14`}>m</span>
-            <div id="logoChar" className="logo">
+            <div id="logoChar" >
               <Alpha> M </Alpha>
               <AlphaOne>M </AlphaOne>
             </div>

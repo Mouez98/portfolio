@@ -1,4 +1,5 @@
 @import '../../assets/Styles/colors';
+@import '../../assets/Styles/helpers';
 
 %spans {
   position: absolute;
@@ -7,15 +8,12 @@
      height: 100%;
 }
 
-
-
-
 #button {
-    height: 100%;
-    width: 200px;
+    height: 5rem;
+    width: 22rem;
     position: relative;
     overflow: hidden;
-    // transition: all .4s ease-out;
+    transition: all .4s linear;
     
     &:hover {
       .bg {
@@ -47,6 +45,32 @@
       z-index: 4;
       left: 50%;
       transform: translateX(-50%);
-      color: #c5c6c7;
+      color: $primary-cyan-color;
+      line-height: 5rem;
+      font-size: 1.3rem;
     }
 }
+
+@include breakPoint(mobile) {
+  #button {
+    width: 17rem ;
+    height: 4rem;
+    .text{
+      font-size: 1.1rem;
+      line-height: 4rem;
+    }
+  }
+
+}
+@include breakPoint(small) {
+  #button {
+    width: 20rem ;
+    height: 4.5rem;
+    .text{
+      font-size: 1.2rem;
+      line-height: 4.5rem;
+    }
+  }
+
+}
+
