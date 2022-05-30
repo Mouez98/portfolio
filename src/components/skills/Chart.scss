@@ -12,11 +12,14 @@ $loop-persentage : 100;
 }
 
 #react {
-    background-color: rgb(210, 108, 213);
+    background-color: $react-color;
 }
 #css {
     background-color: $css3-color;
 }
 #html {
     background-color: $html5-color;
+}
+#git {
+    background-color: $git-color;
 }

@@ -12,9 +12,10 @@
 
 #button {
     height: 100%;
-    width: 100%;
+    width: 200px;
     position: relative;
     overflow: hidden;
+    // transition: all .4s ease-out;
     
     &:hover {
       .bg {
@@ -26,11 +27,11 @@
     }
     .bg {
      @extend %spans;
-     width: 0;
+     width: 0px;
      left: -5%;
      z-index: 2;
      background-color: $primary-cyan-color;
-     transition: width .4s ease-out;
+     transition: all .4s ease-out;
      transform: skewX(-10deg);
     
     }

@@ -5,11 +5,6 @@
     height: 100%;
     margin-bottom: 50px;
 
-    .text-zone h1 {
-        margin-top: 6.7rem !important;
-        margin-bottom: 40px;
-        left: 0 !important;
-    }
 }
 
 .contact-form {
@@ -136,12 +131,14 @@
 /// Map styles 
 
 .map-wrap {
+    display: block;
     background: $secondry-cyan-color;
     width: 53%;
     height: 100%;
-    margin-top: -3%;
+    margin: auto 0 ;
+    // margin-top: -3%;
     position: relative;
-    margin-left: 20px;
+    // margin-left: 20px;
 
     .info-map {
         position: absolute;

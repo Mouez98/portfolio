@@ -1,6 +1,11 @@
 @import '../../assets/Styles/colors';
 
 
+.page-skills {
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
 .tech-tag , .link{
     color: $primary-cyan-color;
     margin-left: 4px;
@@ -17,13 +22,18 @@
 /* Skills Details */
 
 .skills-details {
-    flex: 1 1 49%;
+    flex: 0 1 40%;
+    margin: 0 auto;
+    animation: fadeIn 1s 1.7s forwards;
     .chart {
-        margin: 15px 0;
+        margin: 2.5rem 0;
+        overflow: hidden;
         span{
             font-weight: bold;
             font-family: 'Josefin Sans';
             color: #fff;
+            font-size: 20px;
+            text-transform: capitalize;
           }
           footer {
               width: 100%;
@@ -31,9 +41,26 @@
               background-color: #888;
               div {
                height: 100%;
+               opacity: 0;
                background-color: $react-color;
+               animation: slidL 1s 1.2s forwards;
+               transition: all .3s linear;
               }
           }
     }
    
+}
+
+
+@keyframes slidL {
+    0%{
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+
+    100%{
+       transform: translateX(0);
+       opacity: 1;
+    }
+    
 }

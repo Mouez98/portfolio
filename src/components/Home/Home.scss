@@ -1,15 +1,8 @@
 @import '../../assets/Styles/colors';
 @import '../../assets/Styles/helpers';
 
-%h1Pseudo {
-    font-family: 'La Belle Aurore', cursive;
-    color: $primary-cyan-color;
-    font-size: 18px;
-    position: absolute;
-}
 
-
-.home-page {
+.container.home-page {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,36 +13,38 @@
         max-height: 90%;
         display: block;
         flex: 1 1 60%;
+
         .paraContainer {
-            &::before{
+            &::before {
                 top: 0;
             }
         }
 
         h1 {
             color: #fff;
-            font-size: 60px;
+            font-size: 6rem;
             margin: 0;
             font-family: 'Coolvetica';
-            line-height: 53px;
+            line-height: 5.3rem;
             font-weight: 400;
             position: relative;
+            transition: all .3s linear;
 
 
             &::before {
-                @include htmlTags('<h1>', -40px , 0px);
+                @include htmlTags('<h1>', -4rem, 0px);
             }
 
             &::after {
                 @include htmlTags('</h1>', '', '');
-                margin-top: 18px;
-                margin-left: 20px;
+                margin-top: 1.8rem;
+                margin-left: 2rem;
                 animation: fadeIn 1s 2s backwards;
             }
 
             img {
-                width: 32px;
-                margin-left: 20px;
+                width: 3.2rem;
+                margin-left: 2rem;
                 opacity: 0;
                 height: auto;
                 animation: rotateIn 1s 1.4s linear both;
@@ -58,28 +53,31 @@
 
         p {
             color: $grey-color;
-            margin-top: 20px;
+            margin-top: 2rem;
             font-weight: 400;
-            font-size: 11px;
+            font-size: 1.3rem;
             font-family: sans-serif;
-            letter-spacing: 3px;
+            letter-spacing: .3rem;
             animation: fadeIn 1s 1.8s backwards;
             position: relative;
         }
 
         .flat-button {
-            width: 200px;
-            height: 45px;
-            line-height: 45px;
+            max-width: 20rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
             cursor: pointer;
             position: absolute;
             margin-top: 3rem;
-
-
-            &:hover {
-                background: $primary-cyan-color;
-                color: $dark-gray-color; 
+            display: block;
+            
+            @media (hover: hover) {   
+                &:hover {
+                    background: $primary-cyan-color;
+                    color: $dark-gray-color;
+                }
             }
+
         }
     }
 }
@@ -88,22 +86,21 @@
 .logo {
     position: relative;
     flex: 1 1 39%;
-    // max-height: 90%;
-    font-size: 300px;
+    font-size: 30rem;
 }
 
 #logoChar {
-    font-size: 40px;
+    font-size: 4rem;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 7px 0 5px;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 .5rem 0 .5rem;
     animation: rotateIn .7s 1.4s linear both;
 
     div {
         transform: rotate(0deg);
-        min-width: 45px;
-        font-size: 52px;
+        min-width: 4.5rem;
+        font-size: 5.2rem;
         left: 0;
         top: 0;
 
@@ -111,7 +108,7 @@
 
     div:nth-of-type(2) {
         left: 5%;
-        top: -1px;
+        top: -.1rem;
     }
 }
 
@@ -119,3 +116,213 @@
     animation: rubberBand 1s 1.5s forwards;
 }
 
+
+/* Scroll Down Buttons */
+.scroll-down {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    gap: 1rem;
+
+    &.left {
+        left: -3rem;
+    }
+
+    &.right {
+        right: -5rem;
+    }
+
+    svg {
+        color: $light-gray-color;
+    }
+
+    .scroll-text {
+        writing-mode: vertical-lr;
+        color: $light-gray-color;
+        font-size: 1.3rem;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: all 1s linear;
+        animation: upAndDown 1.5s infinite both;
+    }
+}
+
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/*Extra small screens */
+@media ($extra-small-devices) {
+    .container.home-page {
+        flex-direction: column;
+        padding-top: 10rem;
+        width: 100%;
+
+        .text-zone {
+            padding: 0 2rem;
+            width: 100%;
+
+            h1 {
+                font-size: 5.3rem;
+                margin-left: .3rem;
+
+            .flat-button {
+                margin-top: 10rem;
+            }
+        }
+    }
+
+
+    #main-logo {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        font-size: 22rem;
+        opacity: .7;
+        top: 50%;
+    }
+
+        /* Scroll Down Buttons */
+        .scroll-down {
+
+
+            &.left {
+                left: 1rem;
+            }
+    
+            &.right {
+                right: 1rem;
+            }
+    
+            svg {}
+    
+            .scroll-text {}
+        }
+
+   
+}
+
+/*Small devices tablets */
+@media ($small-devices-tablets) {
+    .container.home-page {
+
+        .text-zone {
+        
+            .paraContainer {
+                &::before {}
+            }
+
+            h1 {
+                 font-size: 5.5rem;
+                &::before {}
+
+                &::after {}
+
+                img {}
+            }
+
+            p {}
+
+            .flat-button {
+               
+
+                
+            }
+        }
+    }
+
+
+    .logo {}
+
+    #logoChar {
+
+        div {}
+
+        div:nth-of-type(2) {}
+    }
+
+    #main-logo {}
+
+
+    /* Scroll Down Buttons */
+    .scroll-down {
+
+
+        &.left {}
+
+        &.right {}
+
+        svg {}
+
+        .scroll-text {}
+    }
+}
+
+/*Medium devices desktops */
+@media ($medium-devices-desktops) {
+    .container.home-page {
+
+        .text-zone {
+            padding: 0 2rem;
+            width: 100%;
+
+            .paraContainer {
+                &::before {}
+            }
+
+            h1 {
+
+                &::before {}
+
+                &::after {}
+
+                img {}
+            }
+
+            p {}
+
+            .flat-button {
+
+                &:hover {}
+            }
+        }
+    }
+
+
+    .logo {}
+
+    #logoChar {
+
+        div {}
+
+        div:nth-of-type(2) {}
+    }
+
+    #main-logo {}
+
+
+    /* Scroll Down Buttons */
+    .scroll-down {
+
+
+        &.left {}
+
+        &.right {}
+
+        svg {}
+
+        .scroll-text {}
+    }}}

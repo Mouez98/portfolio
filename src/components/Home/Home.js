@@ -4,21 +4,18 @@ import { Link } from 'react-router-dom'
 import AnimatedLetters from '../animatedLetters'
 import Loader from 'react-loaders'
 import styled from 'styled-components'
-import { useLocation } from 'react-router-dom'
 
 import Contact from '../contact/index'
 import About from '../about/index'
-import Skills from '../skills/index'
 import MyWork from '../myWork/index'
 import Button from '../Ui/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown} from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
-  const location = useLocation()
-  console.log(location.pathname.slice(1));
-
   const letterClass = useLetteranimation()
   const strArray = ['o', 'u', 'e', 'z']
-  const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.',]
+  const jobArray = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
 
   const Alpha = styled.div`
     font-size: inherit;
@@ -30,17 +27,29 @@ const Home = () => {
     left: 50%;
     top: 50%;
     color: #45a29e;
-    transform: translate(-50%, -50%) rotate(343deg);
+    transform: translate(-50%, -50%) rotate(345deg);
   `
 
   const AlphaOne = styled(Alpha)`
     color: #dc3545;
-    left: 51%;
+    left: 53%;
   `
 
   return (
     <>
       <div className="container home-page">
+        <div className="scroll-down left">
+          <span>
+            <FontAwesomeIcon icon={faArrowDown} color="#c5c6c7" />
+          </span>
+          <span className="scroll-text">scroll down</span>
+        </div>
+        <div className="scroll-down right">
+          <span>
+            <FontAwesomeIcon icon={faArrowDown} color="#c5c6c7" />
+          </span>
+          <span className="scroll-text">scroll down</span>
+        </div>
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
@@ -70,7 +79,7 @@ const Home = () => {
             <p>Frontent developer / ReactJs</p>
           </div>
           <Link to="/contact" className="flat-button">
-            <Button text='CONTACT ME' />
+            <Button text="CONTACT ME" />
           </Link>
         </div>
         <div className="logo" id="main-logo">
@@ -79,11 +88,10 @@ const Home = () => {
         </div>
       </div>
       <About />
-      <Skills />
       <MyWork />
       <Contact />
       <Loader type="pacman" />
-   </>
+    </>
   )
 }
 

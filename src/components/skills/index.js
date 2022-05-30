@@ -48,10 +48,10 @@ const Skills = () => {
           </div>
       </div>
       <div className='skills-details'>
-     <Chart width={95} skill='Front-end'/>
-     <Chart width={80} skill='react'/>
-     <Chart width={70} skill='css'/>
-     <Chart width={65} skill='html'/>
+     <Chart width={85} skill='react'/>
+     <Chart width={90} skill='css'/>
+     <Chart width={80} skill='html'/>
+     <Chart width={65} skill='git'/>
       </div>
     </div>
     <Loader type='pacman' />

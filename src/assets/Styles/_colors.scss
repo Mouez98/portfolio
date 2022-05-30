@@ -15,3 +15,8 @@ $css3-color: #28a4d9;
 $js-color: #efd81d;
 $git-color: #ec4d28;
 $html5-color: #f06529;
+
+/* Media queries */
+$extra-small-devices: 'max-width: 768px';
+$small-devices-tablets: 'min-width: 768px and max-width: 992px';
+$medium-devices-desktops: 'min-width: 992px and max-width: 1200px';
