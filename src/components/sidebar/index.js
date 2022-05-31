@@ -1,13 +1,23 @@
+import { useState } from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faEye, faGear, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faEnvelope, faEye, faGear, faHome, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../Ui/Logo'
 import './index.scss'
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
+  const [toggleBtn, setToggleBtn] = useState(false);
+
+  const toggleBtnHandler = () => setToggleBtn((prev)=> !prev);
+
+  const toggleBtnContent = toggleBtn === false ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faXmark} />
+
+  let navBarClass = toggleBtn? "nav-bar show" : "nav-bar"
+
   return (
-    <div className="nav-bar">
+    <div className={navBarClass}>
         <div className="main-menu">
           <Link to="/" className="logo">
           <Logo />
@@ -73,7 +83,10 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-    </div>
+      <div className='toggle-btn' onClick={toggleBtnHandler}>
+        {toggleBtnContent}
+      </div>
+          </div>
   )
 }
 

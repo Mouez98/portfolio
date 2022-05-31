@@ -116,12 +116,18 @@
 //Media query 
 @include breakPoint(mobile){
     .tags {
-       left: .5rem
+       left: .5rem;
+       &.top-tags {
+         top: 6.3rem;
+       }
     }
 }
 
 @include breakPoint(small) {
     .tags {
-        left: .5rem
+        left: .5rem;
+        &.top-tags {
+            top: 6.3rem;
+          }
      }
 }
