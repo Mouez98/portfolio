@@ -3,7 +3,7 @@
 
 .page {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
 }
 .full-section {
@@ -40,11 +40,10 @@
    
 }
 
-
 .container {
     width: 100%;
     will-change: contents;
-    height: 90%;
+    // height: 90%;
     min-height: 100vh;
     opacity: 0;
     margin: 0 auto;
@@ -113,7 +112,7 @@
     }
 }
 
-//Media query 
+/*** Start Extra small devices ***/
 @include breakPoint(mobile){
     .tags {
        left: .5rem;
@@ -121,13 +120,93 @@
          top: 6.3rem;
        }
     }
-}
+    .page {
+        width: 100%;
+        height: 100%;
+        // position: absolute;
+    }
+    .full-section {
+        position: relative;
+        &::before {
+          @include htmlTags('<section>', 40px, 2px);
+        }
+        &::after {
+            @include htmlTags('</section>', '', 2px);
+          content: '</section>';
+          bottom: 0px;
+        }
+      }
+    
+    
+    .container {
+        flex-direction: column;
+        // padding: 7rem 0;
+        padding-top: 7rem;
+        margin: 1rem  0;
+    }
+    
+    .container.about-page, .container.contact-page, .container.skills-page {
+        .text-zone {
+        width: 90%;
+        margin: 0 auto;
+        max-height: 90%;
+        padding: 1rem;
 
-@include breakPoint(small) {
-    .tags {
-        left: .5rem;
-        &.top-tags {
-            top: 6.3rem;
-          }
-     }
+        h1 {
+            left: 0px;
+        }
+        
+            .animated-letter-hover {
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
+/*** End Extra small devices ***/
+
+
+/*** Start Small devices (tablets) ***/
+@include breakPoint(small){
+   
+    .full-section {
+        position: relative;
+        &::before {
+          @include htmlTags('<section>', 40px, 2px);
+        }
+        &::after {
+            @include htmlTags('</section>', '', 2px);
+          content: '</section>';
+          bottom: 0px;
+        }
+      }
+    
+    
+    .container {
+        flex-direction: column;
+        // padding: 7rem 0;
+        padding-top: 7rem;
+        margin: 1rem  0;
+        height: auto;
+    }
+    
+    .container.about-page, .container.contact-page, .container.skills-page {
+        .text-zone {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+
+        h1 {
+            left: 0px;
+        }
+        
+            .animated-letter-hover {
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+/*** End Small devices (tablets) ***/
