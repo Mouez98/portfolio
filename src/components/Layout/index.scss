@@ -44,7 +44,7 @@
     width: 100%;
     will-change: contents;
     // height: 90%;
-    min-height: 100vh;
+    // min-height: 100vh;
     opacity: 0;
     margin: 0 auto;
     transform-style: preserve-3d;
@@ -58,9 +58,9 @@
 
 .container.about-page, .container.contact-page, .container.skills-page {
     .text-zone {
-    width: 35%;
     margin: 70px 0 70px 120px;
     max-height: 90%;
+    flex: 1 1 49%;
 
         h1 {
             font-size: 53px;
@@ -143,6 +143,7 @@
         // padding: 7rem 0;
         padding-top: 7rem;
         margin: 1rem  0;
+        min-height: 100vh;
     }
     
     .container.about-page, .container.contact-page, .container.skills-page {
@@ -189,6 +190,7 @@
         padding-top: 7rem;
         margin: 1rem  0;
         height: auto;
+        min-height: 100vh;
     }
     
     .container.about-page, .container.contact-page, .container.skills-page {

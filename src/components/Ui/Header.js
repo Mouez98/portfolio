@@ -1,4 +1,4 @@
-import AnimatedLetters from '../animatedLetters'
+import AnimatedLetters from '../animatedLetters/index'
 
 const Header = ({ strArray, letterClass, idx }) => (
   <h1 >
