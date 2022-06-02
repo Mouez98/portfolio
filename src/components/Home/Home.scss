@@ -8,6 +8,7 @@
     justify-content: center;
     width: 80%;
     position: relative;
+    min-height: 100vh;
 
     .text-zone {
         max-height: 90%;
@@ -30,7 +31,6 @@
             font-weight: 400;
             position: relative;
             transition: all .3s linear;
-
 
             &::before {
                 @include htmlTags('<h1>', -4rem, 0px);
@@ -126,11 +126,11 @@
     gap: 1rem;
 
     &.left {
-        left: -3rem;
+        left: -7rem;
     }
 
     &.right {
-        right: -5rem;
+        right: -11%;
     }
 
     svg {
@@ -140,7 +140,7 @@
     .scroll-text {
         writing-mode: vertical-lr;
         color: $light-gray-color;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-family: 'Josefin Sans', sans-serif;
         transition: all 1s linear;
         animation: upAndDown 1.5s infinite both;
@@ -163,7 +163,7 @@
 
 }
 
-/*Extra small screens */
+/***Extra small devices ***/
 @include breakPoint(mobile){
     .container.home-page {
         flex-direction: column;
@@ -204,7 +204,7 @@
         /* Scroll Down Buttons */
         .scroll-down {
             &.left {
-                left: 1rem;
+                left: 2rem;
             }
             &.right {
                 right: 1rem;
@@ -212,9 +212,10 @@
 }
 
 }
+/***End Extra small devices ***/
 
 
-// Small devices Tablets 
+/*** Small devices Tablets ***/
 @include breakPoint(small){
     .container.home-page {
         flex-direction: column;
@@ -263,35 +264,27 @@
 
 
 }
+/*** End Small devices Tablets ***/
 
 
-//Medium Desktops 
+/*** Medium Desktops ***/
 @include breakPoint(medium){
     .container.home-page {
         .text-zone {
             h1 {
                 font-size: 7.2rem;
             }
-            p {
-                        }
-            .flat-button {
-            }
         }
     }
-
-
-    #main-logo {
-    
-    }
-
         /* Scroll Down Buttons */
         .scroll-down {
             &.left {
-                left: -6rem;
+                left: -5%;
             }
     
             &.right {
-                right: -7rem;
+                right: -10rem;
             }
-
-}}
+    }
+}
+/*** End Medium Desktops ***/

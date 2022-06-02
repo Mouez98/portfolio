@@ -1,11 +1,12 @@
 @import '../../assets/Styles/colors';
+@import '../../assets/Styles/helpers';
+
 
 .stage-cube-cont {
   width: 50%;
   margin-top: -100px;
   height: 100%;
   display: flex;
-  overflow: hidden;
   align-items: center;
   justify-content: flex-start;
 
@@ -91,3 +92,34 @@
     transform: rotateX(90deg);
   }
 }
+
+
+/*** Start Extra small devices ***/
+@include breakPoint(mobile) {
+  .stage-cube-cont {
+    width: 90%;
+    margin-top: 0; 
+    min-height: 300px;
+    display: block;
+    overflow: unset;
+
+  }
+}
+  
+/*** End Extra small devices ***/
+
+
+/*** Small devices ***/
+@include breakPoint(small){
+  .stage-cube-cont {
+    width: 90%;
+    margin-top: 0; 
+    min-height: 300px;
+    display: block;
+    overflow: unset;
+
+  }
+
+}
+
+/*** End Small devices ***/

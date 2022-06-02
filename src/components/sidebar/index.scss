@@ -129,6 +129,9 @@
             }
         }
     }
+    .toggle-btn {
+        display: none;
+    }
 }
 
 
@@ -157,7 +160,7 @@
 //Mobile
 @include breakPoint(mobile) {
     .nav-bar {
-        width: 60px;
+        width: 100%;
         height: 60px;
         position: absolute;
         top: 0;
@@ -165,44 +168,71 @@
         display: flex;
         align-items: center;
         flex-direction: row;
-        overflow: hidden;
-    }
+        padding-left: 2rem;
 
-    .main-menu {
-        margin-top: -2rem;
-        display: none;
-
-        a.logo {
-            font-size: 4.5rem;
-
-            .logo {
-                min-width: 45px;
-                transform: translateY(2px);
-
+        .toggle-btn {
+            display: block;
+            width: 4rem;
+            height: 100%;
+            line-height: 6rem;
+            font-size: 3rem;
+            color: $light-gray-color;
+            cursor: pointer;
+            &:hover {
+                color: $primary-cyan-color;
             }
         }
-
-        a.logo+span {
-            font-size: 1.1rem;
-            margin: 1px 4px -10px;
+        .main-menu {
+            margin-top: -2rem;
+    
+            a.logo {
+                font-size: 4.5rem;
+    
+                .logo {
+                    min-width: 45px;
+                    transform: translateY(2px);    
+                }
+            }
+    
+            a.logo+span {
+                font-size: 1.1rem;
+                margin: 1px 4px -10px;
+            }
         }
-    }
+    
+        &.show nav.main-links {
+            transform: translate(0 , 5.5rem); 
+            opacity: 1;
+        }
 
-    nav.main-links {
+        nav.main-links {
         display: flex;
         gap: 3rem;
         height: auto;
-        justify-content: flex-end;
-        display: none;
+        justify-content: center;
+        background: $dark-color;
+        border-top: 1px solid $dark-gray-color;
+        position: absolute;
+        transform: translate(100% , 5.5rem);
+        transition: all .4s linear;
+        opacity: 0;
+    
+        a.my-work-link {
+            &:after {
+                content: 'WORK';
+            }
+        }
+    
+        }
+    
+        ul.social-links {
+            display: none;
+        }
+            
+
     }
 
-    ul.social-links {
-        flex-direction: row;
-        justify-content: flex-end;
-        padding-right: 2rem;
-        gap: 2rem;
-        display: none;
-    }
+
 
 }
 
@@ -221,6 +251,7 @@
 
         a.logo {
             font-size: 4.5rem;
+            margin: 0 3px;
 
             .logo {
                 min-width: 45px;
@@ -247,6 +278,9 @@
         justify-content: flex-end;
         padding-right: 2rem;
         gap: 2rem;
+    }
+    .toggle-btn {
+        display: none;
     }
 
 }

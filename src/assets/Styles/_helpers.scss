@@ -1,7 +1,7 @@
 @import './colors';
 
 
-%tags-styles {
+@mixin tags-styles {
     font-family: 'La Belle Aurore', cursive;
     color: $light-gray-color;
     font-size: 1.8rem;
@@ -11,7 +11,7 @@
 
 @mixin htmlTags($tag, $top, $left) {
     content: $tag;
-    @extend %tags-styles;
+    @include tags-styles;
     @if $left == '' {
         left: initial;
     }
