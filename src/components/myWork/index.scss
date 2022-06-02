@@ -13,10 +13,10 @@
             .paraContainer {
                 color: rgb(255 255  255/ 90%);
                 margin-top: 2rem;
-                font-weight: 400;
-                font-size: 1.6rem;
+                font-weight: 300;
+                font-size: 1.5rem;
                 font-family: sans-serif;
-                letter-spacing: .3rem;
+                letter-spacing: .1rem;
                 animation: fadeIn 1s 1s backwards;
                 position: relative;
                 transition: all .3s linear;
@@ -65,7 +65,6 @@ section {
 
 article {
     display: block;
-    // width: 50%;
     margin: auto;
     height: auto;
     overflow: hidden;
@@ -98,7 +97,7 @@ article {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $dark-gray-color;
+            background-color: #1f2833db;
             padding: 50px;
             transition: all .3s;
 
@@ -222,12 +221,24 @@ article {
         display: grid;
         grid-template-columns: repeat(2, minmax(34rem,1fr));
     }
+
     
 }
 /*** End Medium devices desktop ***/
 
 /*** Medium devices Desktop ***/
 @include breakPoint(small) {
+    .my-work-page .text-zone {
+        margin-left: 7rem;
+        margin-top: 3rem;
+
+        h1 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
     section {
         width: 70rem;
         display: grid;
@@ -238,6 +249,17 @@ article {
 /*** End Medium devices desktop ***/
 /*** Medium devices Desktop ***/
 @include breakPoint(mobile) {
+    .my-work-page .text-zone {
+        margin-left: 7rem;
+        margin-top: 3rem;
+        h1 {
+            font-size: 4.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
     section {
         width: 90%;
         display: grid;

@@ -27,7 +27,7 @@ const MyWork = () => {
 
   const project = currentProjectId
     ? projects.find((project) => project.id === currentProjectId)
-    : null
+    : null ;
 
   useEffect(() => {
     setProjects(data)
@@ -55,9 +55,7 @@ const MyWork = () => {
           </p>
         </div>
         </div>
-        {showOverlay ? (
-          <Modal onClickHandler={showOverlayHandler} project={project} />
-        ) : null}
+          {project && <Modal onClickHandler={showOverlayHandler} project={project} show={showOverlay} />}
         <section>
           {projects && projects.length > 0 ? (
             projects.map((project, idx) => (

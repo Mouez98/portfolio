@@ -115,7 +115,7 @@
 /*** Start Extra small devices ***/
 @include breakPoint(mobile){
     .tags {
-       left: .5rem;
+       left: 1.9rem;
        &.top-tags {
          top: 6.3rem;
        }
@@ -128,10 +128,10 @@
     .full-section {
         position: relative;
         &::before {
-          @include htmlTags('<section>', 40px, 2px);
+          @include htmlTags('<section>', 40px, 2rem);
         }
         &::after {
-            @include htmlTags('</section>', '', 2px);
+            @include htmlTags('</section>', '', 2rem);
           content: '</section>';
           bottom: 0px;
         }
