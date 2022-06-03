@@ -14,7 +14,7 @@
                 color: rgb(255 255  255/ 90%);
                 margin-top: 2rem;
                 font-weight: 300;
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 font-family: sans-serif;
                 letter-spacing: .1rem;
                 animation: fadeIn 1s 1s backwards;
@@ -28,7 +28,7 @@
             }
     
             h1 {
-                color: #fff;
+                color: $primary-cyan-color;
                 font-size: 7.5rem;
                 margin: 0 0 1.5rem;
                 font-family: 'Coolvetica';
@@ -47,10 +47,18 @@
                     margin-left: 2rem;
                     animation: fadeIn 1s 2s backwards;
                 }
-    
         
        }
     }
+
+    &.full-section {
+
+        &::after {
+            @include htmlTags('</section>', '', 8%);
+          content: '</section>';
+            bottom: -4rem;
+        }
+      }
 }
 
 section {
@@ -58,7 +66,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, minmax(35rem,1fr));
     gap: 20px;
-    margin: 50px auto 0;
+    margin: 2rem auto;
     transition: all .3s linear;
 }
 
@@ -221,12 +229,19 @@ article {
         display: grid;
         grid-template-columns: repeat(2, minmax(34rem,1fr));
     }
+    .my-work-page.full-section {
 
+        &::after {
+            @include htmlTags('</section>', '', 8%);
+          content: '</section>';
+            bottom: -4rem;
+        }
+      }
     
 }
 /*** End Medium devices desktop ***/
 
-/*** Medium devices Desktop ***/
+/***Small devices  ***/
 @include breakPoint(small) {
     .my-work-page .text-zone {
         margin-left: 7rem;
@@ -236,19 +251,22 @@ article {
             font-size: 5rem;
         }
         p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
-    }
+    } 
+
     section {
         width: 70rem;
         display: grid;
-        grid-template-columns: repeat(2, minmax(30rem,1fr));
+        grid-template-columns: repeat(2, minmax(29rem,1fr));
+        margin: 1rem 0 2rem;
+       
     }
     
 }
-/*** End Medium devices desktop ***/
+/*** End Small devices ***/
 
-/*** Medium devices Desktop ***/
+/*** Extra small devices  ***/
 @include breakPoint(mobile) {
     .my-work-page .text-zone {
         margin-left: 3rem;
@@ -266,7 +284,11 @@ article {
         display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 5rem;
+        margin: 0 auto;
+        p {
+            font-size: 1.2rem;
+        }
     }
     
 }
-/*** End Medium devices desktop ***/
+/*** End Extra small devices ***/
