@@ -167,17 +167,18 @@
 @include breakPoint(mobile){
     .container.home-page {
         flex-direction: column;
-        padding-top: 10rem;
+        padding: 10rem 1rem 0;
         width: 100%;
 
         .text-zone {
-            padding: 0 2rem;
+            padding: 0 1rem;
             width: 100%;
          
 
             h1 {
-                font-size: 5.3rem;
-                margin-left: .3rem;
+                font-size: 4.3rem;
+                // margin-left: .3rem;
+                margin-top: .7rem ;
             }
             p {
                 letter-spacing: .1rem;
@@ -204,10 +205,10 @@
         /* Scroll Down Buttons */
         .scroll-down {
             &.left {
-                left: 2rem;
+                left: 0rem;
             }
             &.right {
-                right: 1rem;
+                right: .5rem;
             }
 }
 
@@ -219,7 +220,7 @@
 @include breakPoint(small){
     .container.home-page {
         flex-direction: column;
-        padding-top: 10rem;
+        padding: 10rem 1rem 0;
         width: 100%;
 
         .text-zone {
@@ -229,6 +230,7 @@
             h1 {
                 font-size: 6.3rem;
                 margin-left: .3rem;
+                margin-top: 1rem ;
             }
             p {
                 letter-spacing: .1rem;

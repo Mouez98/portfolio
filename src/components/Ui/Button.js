@@ -1,13 +1,13 @@
 import './Button.scss';
 
-const Button = ({text}) => {
+const Button = ({text,type}) => {
 
      return (
-         <div id='button'>
+         <button id='button'>
              <span className='bg'></span>
              <span className='base'></span>
              <span className='text'>{text}</span>
-         </div>
+         </button>
      )
 }
 

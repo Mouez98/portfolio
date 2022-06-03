@@ -13,7 +13,9 @@ const Map = () => {
           Nahj Elbarka 14, 6020 <br />
           Gabes, Elhamma<br />
           <br />
-          <span>Mouez.matoui@gmail.com</span>
+          <span>
+            <a href='mailto:Mouez.matoui@gmail.com' target='_blank' rel='noreferrer'>Mouez.matoui@gmail.com</a>
+          </span>
         </div>
         <MapContainer center={[33.887187, 9.796047]} zoom={13} scrollWheelZoom={false} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
