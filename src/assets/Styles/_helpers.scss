@@ -43,3 +43,26 @@
         }
     }
 }
+
+
+/* Cube animation */
+@mixin face($face) {
+  @if $face ==  front {
+      transform: translateZ(-100px) rotateY(0deg);
+  } 
+  @if $face ==  right {
+      transform: translateZ(-100px) rotateY(-90deg);
+  } 
+  @if $face ==  back {
+      transform: translateZ(-100px) rotateY(-180deg);
+  } 
+  @if $face ==  left {
+      transform: translateZ(-100px) rotateY(90deg);
+  } 
+  @if $face ==  top {
+      transform: translateZ(-100px) rotateX(-90deg);
+  } 
+  @if $face ==  bottom {
+      transform: translateZ(-100px) rotateX(90deg);
+  } 
+}

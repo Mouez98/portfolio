@@ -18,13 +18,7 @@
     }
   }
 
-.top-tags {
-    bottom: auto;
-    top: 35px;
-    .top-tag-body {
-        margin-left: 10px;
-    }
-}
+
 
 .tags {
     color: $light-gray-color;
@@ -35,6 +29,13 @@
     font-family: 'La Belle Aurore';
 }
 
+.top-tags {
+    bottom: auto;
+    top: 35px;
+    .top-tag-body {
+        margin-left: 10px;
+    }
+}
 .bottom-tag-html {
     margin-left: -20px;
    
@@ -115,7 +116,7 @@
 /*** Start Extra small devices ***/
 @include breakPoint(mobile){
     .tags {
-       left: 1.9rem;
+       left: .7rem;
        &.top-tags {
          top: 6.3rem;
        }
@@ -174,14 +175,27 @@
     .full-section {
         position: relative;
         &::before {
-          @include htmlTags('<section>', 40px, 2px);
+          @include htmlTags('<section>', 40px, 1.2rem);
         }
         &::after {
-            @include htmlTags('</section>', '', 2px);
+            @include htmlTags('</section>', '', 1.2rem);
           content: '</section>';
           bottom: 0px;
         }
       }
+
+      .tags {
+          left: 3rem;
+         
+      }
+      .top-tags {
+        // bottom: auto;
+        top: 6rem;
+        left: 1rem;
+        .top-tag-body {
+            margin-left: 0;
+        }
+    }
     
     
     .container {

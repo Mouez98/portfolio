@@ -25,7 +25,7 @@ const Sidebar = () => {
           <span>Mouez</span>
         </div>
       <nav className='main-links'>
-        <NavLink to="/" exact="true" activeclassname="active">
+        <NavLink to="/" exact="true" activeclassname="active" onClick={toggleBtnHandler}>
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink
@@ -33,6 +33,7 @@ const Sidebar = () => {
           exact="true"
           activeclassname="active"
           className="about-link"
+          onClick={toggleBtnHandler}
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
@@ -41,6 +42,7 @@ const Sidebar = () => {
           exact="true"
           activeclassname="active"
           className="skills-link"
+          onClick={toggleBtnHandler}
         >
           <FontAwesomeIcon icon={faGear} color="#4d4d4e" />
         </NavLink>
@@ -50,6 +52,7 @@ const Sidebar = () => {
           exact="true"
           activeclassname="active"
           className="my-work-link"
+          onClick={toggleBtnHandler}
         >
           <FontAwesomeIcon icon={faEye} color="#4d4d4e" />
         </NavLink>
@@ -58,6 +61,7 @@ const Sidebar = () => {
           exact="true"
           activeclassname="active"
           className="contact-link"
+          onClick={toggleBtnHandler}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>

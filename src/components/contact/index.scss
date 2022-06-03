@@ -2,9 +2,8 @@
 @import '../../assets/Styles/helpers';
 
 .contact-page {
-    height: 100%;
-    margin-bottom: 50px;
-
+    height: auto;
+    padding-top: 0;
 }
 
 .contact-form {
@@ -102,19 +101,6 @@
         }
     }
 
-    //Form Submit Btn
-    .flat-button {
-        padding: 7px 15px;
-        background-color: transparent;
-        border: 1px solid $primary-cyan-color;
-        border-radius: 4px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: $primary-cyan-color;
-        display: block;
-        margin-left: auto;
-        font-size: 11px;
-    }
 }
 
 
@@ -136,13 +122,14 @@
     width: 53%;
     height: 100%;
     margin: auto 0 ;
-    // margin-top: -3%;
     position: relative;
-    // margin-left: 20px;
+    min-height: 55rem;
+    opacity: 0;
+    animation: fadeInRight 2s .5s forwards;
 
     .info-map {
         position: absolute;
-        background-color: $dark-color;
+        background-color: #0b0c10d4;
         top: 10%;
         left: 10%;
         width: 267px;
@@ -156,10 +143,13 @@
         z-index: 999;
 
         span {
-            font-size: 16px;
             display: block;
             padding-top: 20px;
-            color: $primary-cyan-color;
+            a {
+                text-decoration: none;
+                color: $primary-cyan-color ;
+                font-size: 16px;
+            }
         }
     }
 }
@@ -168,4 +158,56 @@
     width: 100%;
     height: 100%;
     animation-fill-mode: forwards;
+    position: absolute;
+
 }
+
+/*** Start Extra small devices ***/
+@include breakPoint(mobile) {
+   .map-wrap {
+       width: 85%;
+       margin: 2rem auto 0;
+       min-height: 40rem;
+       .info-map {
+           left: 0;
+           font-size: 1.3rem;
+           width: fit-content;
+           bottom: 0;
+           top: auto;
+           span {
+               padding-top: 0;
+               a {
+                   font-size: 1.4rem;
+
+               }
+           }
+
+       }
+   }
+}
+/*** End Extra small devices ***/
+
+/*** Start small devices ***/
+@include breakPoint(small) {
+   .map-wrap {
+       width: 90%;
+       margin: 2rem auto 0;
+       min-height: 40rem;
+       .info-map {
+           left: 0;
+           font-size: 1.4rem;
+           width: fit-content;
+           bottom: 0;
+           top: auto;
+           span {
+               padding-top: 0;
+               a {
+                   font-size: 1.5rem;
+
+               }
+           }
+
+       }
+   }
+}
+/*** End small devices ***/
