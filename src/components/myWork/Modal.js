@@ -71,12 +71,6 @@ const Overlay = ({ onClickHandler, project, show }) => {
               alt="sample"
               className={slideDirection}
             />
-            {/* {images.map((img,idx) => <img
-              src={img}
-              key={idx}
-              alt="sample"
-              // className={slideDirection}
-            />)} */}
             <i className="left" onClick={onClickChevronLeftHandler}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </i>

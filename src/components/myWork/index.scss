@@ -247,10 +247,11 @@ article {
     
 }
 /*** End Medium devices desktop ***/
+
 /*** Medium devices Desktop ***/
 @include breakPoint(mobile) {
     .my-work-page .text-zone {
-        margin-left: 7rem;
+        margin-left: 3rem;
         margin-top: 3rem;
         h1 {
             font-size: 4.5rem;
@@ -264,6 +265,7 @@ article {
         width: 90%;
         display: grid;
         grid-template-columns: 1fr;
+        padding-bottom: 5rem;
     }
     
 }
