@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react'
 
 import './index.scss'
-import Modal from './Modal'
+import Modal from './modal/Modal'
 import Loader from 'react-loaders'
 import data from './data'
 import useSectionClass from '../../hooks/use-sectionClass'
