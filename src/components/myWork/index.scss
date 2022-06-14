@@ -9,6 +9,7 @@
         width: 100%;
         margin-left: 20rem;
         margin-top: 2rem;
+        animation: slideInLeft 1.5s 1s forwards;
     
             .paraContainer {
                 color: rgb(255 255  255/ 90%);
@@ -68,6 +69,7 @@ section {
     gap: 20px;
     margin: 2rem auto;
     transition: all .3s linear;
+    animation: slideInRight 1.5s 1s forwards;
 }
 
 
@@ -76,7 +78,6 @@ article {
     margin: auto;
     height: auto;
     overflow: hidden;
-    
     box-shadow: 3px 6px 0px 2px rgb(0 0 0 / 30%) ;
 
     .article-content {

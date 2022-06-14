@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import Contact from '../contact/index'
 import About from '../about/index'
 import MyWork from '../myWork/index'
-import Button from '../Ui/Button'
+import Button from '../Ui/button/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown} from '@fortawesome/free-solid-svg-icons'
 

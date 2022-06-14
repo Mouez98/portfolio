@@ -1,12 +1,12 @@
 import { useEffect, useState, useCallback } from 'react'
 
 import './index.scss'
-import Modal from './modal/Modal'
 import Loader from 'react-loaders'
 import data from './data'
 import useSectionClass from '../../hooks/use-sectionClass'
-import Header from '../Ui/Header'
+import Header from '../Ui/header/Header'
 import useLetteranimation from '../../hooks/use-letterAnimation'
+import Overlay from '../Ui/overlay/Overlay'
 
 const MyWork = () => {
   const [projects, setProjects] = useState([])
@@ -23,6 +23,7 @@ const MyWork = () => {
 
   const showOverlayHandler = useCallback(() => {
     setShowOverlay((prev) => !prev)
+    console.log('clicked');
   }, [])
 
   const project = currentProjectId
@@ -55,7 +56,8 @@ const MyWork = () => {
           </p>
         </div>
         </div>
-          {project && <Modal onClickHandler={showOverlayHandler} project={project} show={showOverlay} />}
+          {project && showOverlay &&
+          <Overlay onClickHandler={showOverlayHandler} project={project} show={showOverlay} />}
         <section>
           {projects && projects.length > 0 ? (
             projects.map((project, idx) => (

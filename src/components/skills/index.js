@@ -1,7 +1,7 @@
 import Loader from 'react-loaders'
 import { Link } from 'react-router-dom'
 import useLetteranimation from '../../hooks/use-letterAnimation'
-import Header from '../Ui/Header'
+import Header from '../Ui/header/Header'
 import Chart from './Chart'
 import './index.scss'
 

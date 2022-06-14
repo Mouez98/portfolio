@@ -1,41 +1,18 @@
 @import '../../../assets/Styles/colors';
 @import '../../../assets/Styles/helpers';
 
+
+
 .modal {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 6rem;
-    background-color: rgb(0 0 0 / 70%);
-    z-index: 1111;
-    transition: all .5s ease-out;
-
-    &.entering {
-        animation: zoomIn .5s both;
-        opacity: 1;
-    }
-
-    &.entered {
-        opacity: 1;
-    }
-
-    &.exiting {
-        animation: zoomOut .5s both;
-    }
-}
-
-.overlay {
-    position: absolute;
-    display: block;
-    opacity: 0;
-    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 60%;
     height: 100vh;
-    padding-top: 50px;
     z-index: 1112;
     transition: all .5s ease-out;
+    animation: fadeIn .5s both;
 
     &.entering {
         animation: zoomIn .5s both;
@@ -55,40 +32,31 @@
         width: 100%;
         position: relative;
         height: 50%;
-        // overflow: hidden;
+        overflow: hidden;
         display: flex;
 
         img {
             width: 100%;
             height: 100%;
             transition: all .5s linear;
-            // opacity: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
 
             &.prevImg {
-                transform: translateX(-100%) ;
-                position: absolute;
-                opacity: 0;
+                transform: translateX(-100%);
             }
+
             &.currentImg {
-                opacity: 1;
                 transform: translateX(0);
                 opacity: 1;
+
             }
+
             &.nextImg {
                 transform: translateX(100%);
-                position: absolute;
-                opacity: 0;
-
             }
-
-            // &.left {
-            //     animation: slideInRight 1s forwards;
-            // }
-
-            // &.right {
-            //     animation: slideInLeft 1s backwards;
-            // }
-
         }
 
         i {
@@ -115,6 +83,7 @@
         background-color: $dark-color;
         height: 50%;
         padding: 20px 20px 10px;
+        position: relative;
 
         .header-container {
             border-bottom: 1px solid $light-gray-color;
@@ -191,10 +160,6 @@
 /*** Extra small devices ***/
 @include breakPoint(mobile) {
     .modal {
-        left: 0;
-    }
-
-    .overlay {
         width: 100%;
         padding: 0 2rem;
     }
@@ -205,10 +170,6 @@
 /*** Small devices ***/
 @include breakPoint(small) {
     .modal {
-        left: 0;
-    }
-
-    .overlay {
         width: 80%;
         margin: auto;
     }

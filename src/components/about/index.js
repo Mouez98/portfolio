@@ -1,10 +1,9 @@
-import {faAngular,faCss3,faGitAlt,faHtml5,faJsSquare,faReact, faSass} from '@fortawesome/free-brands-svg-icons'
+import {faCss3,faGitAlt,faHtml5,faJsSquare,faReact, faSass} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import './index.scss'
 import useLetteranimation from '../../hooks/use-letterAnimation'
-import Header from '../Ui/Header'
-// import { useLocation } from 'react-router-dom'
+import Header from '../Ui/header/Header'
 import useSectionClass from '../../hooks/use-sectionClass'
 
 const About = () => {

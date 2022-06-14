@@ -4,8 +4,8 @@ import useLetteranimation from '../../hooks/use-letterAnimation'
 import emailjs from '@emailjs/browser'
 import Map from './Map'
 import './index.scss'
-import Header from '../Ui/Header'
-import Button from '../Ui/Button'
+import Header from '../Ui/header/Header'
+import Button from '../Ui/button/Button'
 
 const Contact = () => {
   const letterClass = useLetteranimation(3000)
@@ -91,7 +91,6 @@ const Contact = () => {
                   <label htmlFor="message" className="label-textarea"></label>
                 </li>
                 <li>
-                  {/* <input type="submit" value="send" className="flat-button" /> */}
                   <Button type={'submit'} text={'send'} />
                 </li>
               </ul>
