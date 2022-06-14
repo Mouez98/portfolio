@@ -1,15 +1,10 @@
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 
 import './Chart.scss'
 
 
 const Chart = ({width, skill}) => {
     const dataWidthRef = useRef()
-
-    useEffect(()=>{
-       console.log(dataWidthRef.current.dataset.width);
-    },[])
-
 
     return(
         <div className='chart'>
