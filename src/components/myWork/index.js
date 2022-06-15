@@ -23,7 +23,6 @@ const MyWork = () => {
 
   const showOverlayHandler = useCallback(() => {
     setShowOverlay((prev) => !prev)
-    console.log('clicked');
   }, [])
 
   const project = currentProjectId
@@ -44,20 +43,12 @@ const MyWork = () => {
           />
         <div className="paraContainer">
           <p>
-            A small gallery of recent projects chosen by me. I've done them all
-            together with amazing people from companies around the globe. It's
-            only a drop in the ocean compared to the entire list.
-            Interested to
-            see some more? Visit
-            <a rel="work" href="/portfolio/">
-              my work
-            </a>
-            page.
+            A small gallery of recent projects chosen by me.I learned a lot of interesting tricks doing these projects, I have been always trying to apply all my new knowledge on each new project.
           </p>
         </div>
         </div>
           {project && showOverlay &&
-          <Overlay onClickHandler={showOverlayHandler} project={project} show={showOverlay} />}
+          <Overlay onClickHandler={showOverlayHandler} project={project}/>}
         <section>
           {projects && projects.length > 0 ? (
             projects.map((project, idx) => (

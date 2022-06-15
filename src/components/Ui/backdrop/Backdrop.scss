@@ -1,4 +1,4 @@
-
+@import '../../../assets/Styles/helpers';
 
 .backdrop {
     position: fixed;
@@ -10,25 +10,13 @@
     z-index: 1111;
     transition: all .5s ease-out;
 
-    &.entering {
-        animation: zoomIn .5s both;
-        opacity: 1;
-    }
+}
 
-    &.entered {
-        opacity: 1;
-    }
-
-    &.exiting {
-        animation: zoomOut .5s both;
+/*** Extra small devices ***/
+@include breakPoint(mobile) {
+    .backdrop {
+        left: 0;
     }
 }
 
-// /*** Extra small devices ***/
-// @include breakPoint(mobile) {
-//     .backdrop {
-//         left: 0;
-//     }
-// }
-
-// /*** End Extra small devices ***/
+/*** End Extra small devices ***/

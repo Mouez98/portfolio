@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Modal.scss'
 import ImagesContainer from './Images.Container'
 
-const Modal = ({ onClickHandler, project, show }) => {
+const Modal = ({ onClickHandler, project}) => {
   const { header, subHeader, details, images, live, sourceCode } = project
 
   return (
@@ -29,8 +29,7 @@ const Modal = ({ onClickHandler, project, show }) => {
                 </button>
               </div>
             </div>
-          </div>
-  )
+          </div>)
 }
 
 export default Modal

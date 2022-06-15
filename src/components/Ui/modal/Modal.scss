@@ -14,19 +14,9 @@
     transition: all .5s ease-out;
     animation: fadeIn .5s both;
 
-    &.entering {
-        animation: zoomIn .5s both;
-        opacity: 1;
+    &.exiting{
+        animation: zoomOut 2s backwards; 
     }
-
-    &.entered {
-        opacity: 1;
-    }
-
-    &.exiting {
-        animation: zoomOut .5s both;
-    }
-
 
     .image-container {
         width: 100%;
@@ -162,6 +152,81 @@
     .modal {
         width: 100%;
         padding: 0 2rem;
+        top: 60%;
+
+        .image-container {
+            height: 30%;
+    
+            img {
+
+    
+                &.prevImg {
+                }
+    
+                &.currentImg {
+    
+                }
+    
+                &.nextImg {
+                }
+            }
+    
+            i {
+                padding: 0px 1.3rem;
+                font-size: 3rem;
+    
+                &.left {
+                }
+    
+                &.right {
+                }
+            }
+        }
+    
+
+        .description {
+           
+    
+            .header-container {
+
+    
+                h2 {
+                    font-size: 1.8rem;
+                }
+    
+                h3 {
+                    font-size: 1.6rem;
+                }
+    
+            }
+    
+            .para-container {
+                p {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.1rem;
+                }
+    
+            }
+    
+            .btn-container {
+    
+                button {
+                    font-size: 1.2rem;
+                    padding: .8rem 1rem;
+    
+                    &:hover {
+                    }
+                }
+    
+                .closeBtn {
+                    @extend button;
+                    position: absolute;
+                    right: 2rem;
+                }
+    
+            }
+        }
+    
     }
 }
 

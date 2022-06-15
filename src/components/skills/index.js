@@ -17,16 +17,12 @@ const Skills = () => {
         <Header strArray={headerText} letterClass={letterClass} idx={15} />
         <div className='paraContainer'>
         <p>
-          Expert in front-end development including technologies like 
+          Front-end development including technologies like 
           <span className="tech-tag">HTML5</span>, 
           <span className="tech-tag">CSS3</span>, 
           <span className="tech-tag">JavaScript</span>, 
-          <span className="tech-tag">jQuery</span>, 
-          <span className="tech-tag">Angular2</span>, 
           <span className="tech-tag">React</span>, 
           <span className="tech-tag">TypeScript</span>, 
-          <span className="tech-tag">Jasmine</span>, 
-          <span className="tech-tag">Bootstrap</span>, 
           <span className="tech-tag">Sass</span>, 
           <span className="tech-tag">Git</span>, 
           etc.
@@ -41,16 +37,14 @@ const Skills = () => {
           </p>
           <p>
             Visit my
-            <Link to='https://www.linkedIn.com/' className='link'>LinkedIn</Link> profile for more details. Also you can checkout my cv on this
-            <Link to='cv' className='link'>link</Link> , or feel free to give a peek on some of my blog
-            <Link to='blog' className='link'>posts .</Link>
-          </p>
+            <Link to='https://www.linkedIn.com/mouez-matoui/' className='link'>LinkedIn</Link> profile for more details.          </p>
           </div>
       </div>
       <div className='skills-details'>
      <Chart width={85} skill='react'/>
      <Chart width={90} skill='css'/>
-     <Chart width={80} skill='html'/>
+     <Chart width={90} skill='html'/>
+     <Chart width={85} skill='javaScript'/>
      <Chart width={65} skill='git'/>
       </div>
     </div>

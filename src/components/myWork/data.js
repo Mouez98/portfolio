@@ -20,15 +20,58 @@ import DestinationsPage from '../../assets/space-toursim/DestinationsPage.png'
 import CrewPage from '../../assets/space-toursim/CrewPage.png'
 import TechnologiesPage from '../../assets/space-toursim/TechnolgiesPage.png'
 
+//Interactive Comments Images
+import CommmentsHome from '../../assets/interactice-comments/CommentsHome.png'
+import CommmentsPage from '../../assets/interactice-comments/CommentsPage.png'
+import Replies from '../../assets/interactice-comments/Replies.png'
 const projects = [
+  {
+    id:'p2' ,
+    name: 'Kasper Template',
+    header: 'One single page',
+    subHeader: 'Landing page contains sevrel samples of sections in real-life ',
+    technologies: ['Html', 'Css'],
+    details:
+      'I used almost all my Css knowledge back then. It was my first big Css project ',
+    homePage: homePage,
+    live: 'https://mouez98.github.io/kasper.github.io/',
+    sourceCode: 'https://github.com/Mouez98/kasper.github.io',
+    images: [
+      homePage,
+      servicesSection,
+      sample,
+      portfolioSection,
+      testimonialsSection,
+      pricingSection,
+      footerSection,
+    ],
+  },
+  {
+    id:'p3' ,
+    name: 'Space Tourism Website',
+    header: 'Space Tourism Website',
+    subHeader: 'One single page with illusion of routing',
+    technologies: ['Html', 'Css', 'ReactJs','react-router-don'],
+    details:
+      'I took the design from frontendmentor website, and I really enjoyed building this project. ',
+    homePage: SpaceHome,
+    live: 'https://space-tourism-website-main-react.vercel.app/',
+    sourceCode: 'https://github.com/Mouez98/space-tourism-website-main-react.git',
+    images: [
+      SpaceHome,
+      DestinationsPage,
+      CrewPage,
+      TechnologiesPage
+    ],
+  },
   {
     id:'p1' ,
     name: 'Rest Countries Api',
-    header: 'ChowNow Ordering Web',
-    subHeader: 'WHITE-LABEL ONLINE ORDERING SOLUTION.',
+    header: 'Rest Countries',
+    subHeader: 'All countries in one page ',
     technologies: ['Html', 'Scss','JavaScript','ReactJs','react-router-dom'],
     details:
-      'ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.',
+      'Fetching data from API and display them all with ability to search or filter by region and theme toggle.',
     homePage: HomeFilter,
     live: 'https://rest-api-93c6e.web.app/',
     sourceCode: 'https://github.com/Mouez98/rest-countries-api.git',
@@ -40,42 +83,23 @@ const projects = [
       Country
     ],
   },
+  
+  
   {
-    id:'p2' ,
-    name: 'Kasper Template',
-    header: 'One single page',
+    id:'p4' ,
+    name: 'Interactive Comments Section',
+    header: 'Interactive comments',
     subHeader: 'This page contain sevrel section ',
-    technologies: ['Html', 'Css'],
+    technologies: ['Html', 'Css', 'ReactJs','redux'],
     details:
       'I used almost all my Css knowledge back then. It was my first big Css project ',
-    homePage: homePage,
-    live: 'https://mouez98.github.io/kasper.github.io/',
-    sourceCode: 'https://github.com/Mouez98/kasper.github.io',
+    homePage: CommmentsHome,
+    live: 'https://interactive-comments-section-tau.vercel.app/',
+    sourceCode: 'https://github.com/Mouez98/interactive-comments-section.git',
     images: [
-      servicesSection,
-      sample,
-      portfolioSection,
-      testimonialsSection,
-      pricingSection,
-      footerSection,
-    ],
-  },
-  {
-    id:'p' ,
-    name: 'Space Tourism Website',
-    header: 'One single page',
-    subHeader: 'This page contain sevrel section ',
-    technologies: ['Html', 'Css', 'ReactJs','react-router-don'],
-    details:
-      'I used almost all my Css knowledge back then. It was my first big Css project ',
-    homePage: SpaceHome,
-    live: 'https://space-tourism-website-main-react.vercel.app/',
-    sourceCode: 'https://github.com/Mouez98/space-tourism-website-main-react.git',
-    images: [
-      SpaceHome,
-      DestinationsPage,
-      CrewPage,
-      TechnologiesPage
+      CommmentsHome,
+      CommmentsPage,
+      Replies,
     ],
   },
 ]
