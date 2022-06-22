@@ -89,10 +89,10 @@ const projects = [
     id:'p4' ,
     name: 'Interactive Comments Section',
     header: 'Interactive comments',
-    subHeader: 'This page contain sevrel section ',
+    subHeader: 'Interative comments and replies ',
     technologies: ['Html', 'Css', 'ReactJs','redux'],
     details:
-      'I used almost all my Css knowledge back then. It was my first big Css project ',
+      'You can add comments,delete,update and read(CRUD), also you can upVote comment or downVote.',
     homePage: CommmentsHome,
     live: 'https://interactive-comments-section-tau.vercel.app/',
     sourceCode: 'https://github.com/Mouez98/interactive-comments-section.git',
