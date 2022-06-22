@@ -1,7 +1,7 @@
 
 # My portfolio
 
-This is Mouez's portfolio, In wish you like it.
+This is Mouez's portfolio, I wish you like it.
 
 
 ## 🚀 About Me
