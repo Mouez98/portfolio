@@ -17,7 +17,7 @@ I'm a self taught developer...
 
 ## Screenshots
 
-![Home Page screenshot]('https//src/assets/readme-images/portfolioHome.png')
+![Home page](https://user-images.githubusercontent.com/72972103/175423044-d7c20788-b9f8-4e98-8fbf-b2499740a4c7.png "Home Page")
 
 
 ## Run Locally
