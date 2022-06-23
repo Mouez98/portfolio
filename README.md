@@ -17,7 +17,7 @@ I'm a self taught developer...
 
 ## Screenshots
 
-![Home Page screenshot]('/src/assets/readme-images/portfolioHome.png')
+![Home Page screenshot]('https//src/assets/readme-images/portfolioHome.png')
 
 
 ## Run Locally
