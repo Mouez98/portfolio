@@ -10,7 +10,7 @@ const Map = () => {
           <br />
           Tunisia,
           <br />
-          Nahj Elbarka 14, 6020 <br />
+          Rue El Barka, 6020 <br />
           Gabes, Elhamma<br />
           <br />
           <span>
