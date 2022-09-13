@@ -5,6 +5,35 @@
 .my-work-page {
     flex-direction: column;
     padding-top: 8rem;
+
+
+    .search-nav {
+        max-width: 120rem;
+        padding: .2rem .5rem;
+        margin-right: 7rem;
+        color: $light-gray-color;
+        display: flex;
+        justify-content: space-between;
+        background-color:  hsla(210, 2%, 78%, 0.1);
+        border-radius: .4rem;
+        ul {
+            font-size: 1.7rem;
+            display: flex;
+        
+            li {
+                padding: .5rem 1.2rem ;
+                cursor: pointer;
+                border: 1px solid transparent;
+            }
+            .active, li:hover {
+               color: $primary-cyan-color;
+               border: 1px solid $primary-cyan-color;
+               border-radius: .3rem;
+            }
+            
+        }
+    }
+
     .text-zone {
         width: 100%;
         margin-left: 20rem;

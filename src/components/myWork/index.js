@@ -7,6 +7,7 @@ import useSectionClass from '../../hooks/use-sectionClass'
 import Header from '../Ui/header/Header'
 import useLetteranimation from '../../hooks/use-letterAnimation'
 import Overlay from '../Ui/overlay/Overlay'
+import Search from './Search'
 
 const MyWork = () => {
   const [projects, setProjects] = useState([])
@@ -41,6 +42,9 @@ const MyWork = () => {
             idx={15}
             letterClass={letterClass}
           />
+
+       <Search />
+
         <div className="paraContainer">
           <p>
             A small gallery of recent projects chosen by me.I learned a lot of interesting tricks doing these projects, I have been always trying to apply all my new knowledge on each new project.
